@@ -1,4 +1,5 @@
 package com.xairaven;
+import edu.princeton.cs.introcs.*;
 
 public class Tasks {
     public void task111() { //11.01.2021
@@ -51,14 +52,15 @@ public class Tasks {
         System.out.print("\n\n");
     }
 
-   /* public void task116(+) {
+  public void task116() {
         System.out.println("-- Task 1.1.6 --");
         int f = 0;
         int g = 1;
         for (int i = 0; i <= 15; i++) {
-            StdOut.
+            StdOut.println(f);
+            f = f + g;
+            g = f - g;
         }
-
         System.out.print("\n\n");
-    }*/
+    }
 }
