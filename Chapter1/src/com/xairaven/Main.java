@@ -7,7 +7,8 @@ public class Main {
         tasks.task111();
         tasks.task112();
         tasks.task113(args); // Main -> Edit configurations -> Program Arguments -> Your input
-        tasks.task114(); */
-        tasks.task115(0.5, 1);
+        tasks.task114();
+        tasks.task115(0.5, 1);*/
+
     }
 }

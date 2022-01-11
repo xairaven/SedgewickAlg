@@ -50,4 +50,15 @@ public class Tasks {
         }
         System.out.print("\n\n");
     }
+
+   /* public void task116(+) {
+        System.out.println("-- Task 1.1.6 --");
+        int f = 0;
+        int g = 1;
+        for (int i = 0; i <= 15; i++) {
+            StdOut.
+        }
+
+        System.out.print("\n\n");
+    }*/
 }
