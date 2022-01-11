@@ -1,8 +1,9 @@
 package com.xairaven;
 
 public class Main {
-
     public static void main(String[] args) {
-        System.out.println("Hello World TEST");
+        Tasks tasks = new Tasks();
+        tasks.task111();
+        tasks.task112();
     }
 }
