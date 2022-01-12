@@ -154,8 +154,7 @@ public class TasksChapter1 {
         System.out.print("\n\n");
     }
 
-    public int[][] task1_1_13(int[][] arr) {
-        System.out.println("-- Task 1.1.13 --");
+    public int[][] task1_1_13arr(int[][] arr) {
         int[][] arr_T = new int[arr[0].length][arr.length];
         for (int i = 0; i < arr[0].length; i++) {
             for (int j = 0; j < arr.length; j++) {
@@ -165,7 +164,41 @@ public class TasksChapter1 {
         return arr_T;
     }
 
-    public void task1_1_14() {
+    public void task1_1_13(int[][] arr) {
+        System.out.println("-- Task 1.1.13 --");
+        int[][] arr_1_1_13 = task1_1_13arr(arr);
+        for (int i = 0; i < arr_1_1_13.length; i++) {
+            for (int j = 0; j < arr_1_1_13[0].length; j++) {
+                System.out.printf("%d\t", arr_1_1_13[i][j]);
+            }
+            System.out.print("\n");
+        }
+        System.out.print("\n\n");
+    }
+
+    public int task1_1_14lg(int N) {
+        int lg = 2;
+        int x = 1;
+        for(int i = 1; lg < N; i++) {
+            lg *= 2;
+            x++;
+        }
+        if (lg == N) {
+            return x;
+        } else {
+            return x-1;
+        }
+    }
+
+    public void task1_1_14(int N) {
         System.out.println("-- Task 1.1.14 --");
+        System.out.println((task1_1_14lg(N)));
+        System.out.print("\n\n");
+    }
+
+    public void task1_1_15() {
+        System.out.println("-- Task 1.1.15 --");
+
+        System.out.print("\n\n");
     }
 }

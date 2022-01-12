@@ -30,15 +30,9 @@ public class MainChapter1 {
                 {1, 5, 6, 7, 7},
                 {2, 3, 2, 3, 9}
         };
-        int[][] arr_1_1_13 = tasks.task1_1_13(arr1_1_13);
-        for (int i = 0; i < arr_1_1_13.length; i++) {
-            for (int j = 0; j < arr_1_1_13[0].length; j++) {
-                System.out.printf("%d\t", arr_1_1_13[i][j]);
-            }
-            System.out.print("\n");
-        }
-        System.out.print("\n\n");
-        /////////////////*/
-        tasks.task1_1_14();
+        tasks.task1_1_13(arr1_1_13);
+        /////////////////
+        tasks.task1_1_14(2);*/
+        tasks.task1_1_15();
     }
 }
