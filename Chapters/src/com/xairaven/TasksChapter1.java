@@ -1,7 +1,7 @@
 package com.xairaven;
 import edu.princeton.cs.introcs.*;
 
-public class Tasks {
+public class TasksChapter1 {
     public void task1_1_1() { //11.01.2021
         System.out.println("-- Task 1.1.1 --");
         System.out.println((0 + 15) / 2);

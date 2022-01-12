@@ -1,9 +1,8 @@
 package com.xairaven;
 
-public class Main {
+public class MainChapter1 {
     public static void main(String[] args) {
-        Tasks tasks = new Tasks();
-        /*
+        TasksChapter1 tasks = new TasksChapter1(); /*
         tasks.task1_1_1();
         tasks.task1_1_2();
         tasks.task1_1_3(args); // Main -> Edit configurations -> Program Arguments -> Your input
