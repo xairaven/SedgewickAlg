@@ -262,4 +262,64 @@ public class TasksChapter1 {
         System.out.printf("(*) mystery(3, 11) = %d\n", task1_1_18_mysteryMul(3, 11));
         System.out.print("\n\n");
     }
+
+    public long task1_1_19_F(int N) {
+        if (N == 0) return 0;
+        if (N == 1) return 1;
+        return task1_1_19_F(N-1) + task1_1_19_F(N-2);
+    }
+
+    public void task1_1_19() {
+        System.out.println("-- Task 1.1.19 --");
+        /*
+        for (int N = 0; N < 100; N++) {
+            StdOut.println(N + " " + task1_1_19_F(N));
+        }*/
+        long first = 0 , second = 1;
+        long num; long temp;
+        for (int N = 2; N < 100; N++) {
+            num = first + second;
+            temp = second;
+            first = temp;
+            second = num;
+            StdOut.println(N + " " + num);
+        }
+        System.out.print("\n\n");
+    }
+
+    public double task1_1_20_lgFact(int N) {
+        if (N == 1) return 0;
+        return task1_1_20_lgFact(N - 1) + Math.log(N);
+    }
+
+    public void task1_1_20(int N) {
+        System.out.println("-- Task 1.1.20 --");
+        System.out.printf("ln(%d!) = %.4f", N, task1_1_20_lgFact(N));
+        System.out.print("\n\n");
+    }
+
+    private static void task1_1_21_formattedPrint(String[] values) {
+        if(values.length < 2) {
+            System.exit(0);
+        }
+        StdOut.printf("%8s", values[0]);
+        StdOut.printf("%8s", values[1]);
+        StdOut.printf("%8s", values[2]);
+
+        double value1 = Double.parseDouble(values[1]);
+        double value2 = Double.parseDouble(values[2]);
+        double result = value1 / value2;
+        StdOut.printf("%7.3f \n", result);
+    }
+
+    public void task1_1_21() {
+        System.out.println("-- Task 1.1.21 --");
+        In in = new In();
+        while (in.hasNextLine()) {
+            String line = in.readLine();
+            String[] values = line.split(" ");
+            task1_1_21_formattedPrint(values);
+        }
+        System.out.print("\n\n");
+    }
 }
