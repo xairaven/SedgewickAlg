@@ -10,11 +10,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://C:/Java External Jar/stdlib-package.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/stdlib-package.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://C:/Java External Jar/stdlib-package.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/stdlib-package.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>

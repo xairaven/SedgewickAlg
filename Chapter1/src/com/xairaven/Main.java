@@ -14,6 +14,5 @@ public class Main {
         tasks.task118();
         tasks.task119(52);   //Converting from decimal to binary
         tasks.task1110();*/
-
     }
 }
