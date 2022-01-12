@@ -40,5 +40,6 @@ public class MainChapter1 {
 
         tasks.task1_1_16(6);
         tasks.task1_1_17();
+        tasks.task1_1_18();
     }
 }

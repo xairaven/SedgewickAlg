@@ -242,7 +242,24 @@ public class TasksChapter1 {
         System.out.print("\n\n");
     }
 
-    public void task1_1_18() {
+    public int task1_1_18_mysteryPlus(int a, int b) {
+        if (b == 0) return 0;
+        if (b % 2 == 0) return task1_1_18_mysteryPlus(a + a, b / 2);
+        return task1_1_18_mysteryPlus(a + a, b / 2) + a;
+    }
 
+    public int task1_1_18_mysteryMul(int a, int b) {
+        if (b == 0) return 1;
+        if (b % 2 == 0) return task1_1_18_mysteryMul(a * a, b / 2);
+        return task1_1_18_mysteryMul(a * a, b / 2) * a;
+    }
+
+    public void task1_1_18() {
+        System.out.println("-- Task 1.1.18 --");
+        System.out.printf("(+) mystery(2, 25) = %d\n", task1_1_18_mysteryPlus(2, 25));
+        System.out.printf("(+) mystery(3, 11) = %d\n", task1_1_18_mysteryPlus(3, 11));
+        System.out.printf("(*) mystery(2, 25) = %d\n", task1_1_18_mysteryMul(2, 25));
+        System.out.printf("(*) mystery(3, 11) = %d\n", task1_1_18_mysteryMul(3, 11));
+        System.out.print("\n\n");
     }
 }
