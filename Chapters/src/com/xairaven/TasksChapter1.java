@@ -1,5 +1,6 @@
 package com.xairaven;
 import edu.princeton.cs.introcs.*;
+import java.util.Arrays;
 
 public class TasksChapter1 {
     public void task1_1_1() { //11.01.2021
@@ -196,9 +197,52 @@ public class TasksChapter1 {
         System.out.print("\n\n");
     }
 
-    public void task1_1_15() {
-        System.out.println("-- Task 1.1.15 --");
+    public int[] task1_1_15_histogram(int[] a, int M) {
+        int[] mArr = new int[M];
+        Arrays.sort(a);
+        for (int i = 0; i < a.length && i < M; i++) {
+            for (int j = 0; j < a.length; j++) {
+                if (a[j] == i) {
+                    mArr[i]++;
+                }
+            }
+        }
+        return mArr;
+    }
 
+    public void task1_1_15(int[] arr, int M) {
+        System.out.println("-- Task 1.1.15 --");
+        int[] a = task1_1_15_histogram(arr, M);
+        for (int i = 0; i < a.length; i++) {
+            System.out.printf("%d\t", a[i]);
+        }
         System.out.print("\n\n");
+    }
+
+    public String task1_1_16_exR1(int n) {
+        if (n <= 0) return "";
+        return task1_1_16_exR1(n - 3) + n + task1_1_16_exR1(n-2) + n;
+    }
+
+    public void task1_1_16(int n) {
+        System.out.println("-- Task 1.1.16 --");
+        System.out.println(task1_1_16_exR1(n));
+        System.out.print("\n\n");
+    }
+
+    public void task1_1_17() {
+        /*
+        public static String exR2(int n) {
+            String s = exR2(n-3) + n + exR2(n-2) + n;
+            if (n <= 0) return "";
+            return s;
+        }*/
+        System.out.println("-- Task 1.1.17 --");
+        System.out.println("Because of StackOverflow Error.");
+        System.out.print("\n\n");
+    }
+
+    public void task1_1_18() {
+
     }
 }

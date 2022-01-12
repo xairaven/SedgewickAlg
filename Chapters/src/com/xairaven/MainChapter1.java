@@ -2,7 +2,8 @@ package com.xairaven;
 
 public class MainChapter1 {
     public static void main(String[] args) {
-        TasksChapter1 tasks = new TasksChapter1(); /*
+        TasksChapter1 tasks = new TasksChapter1();
+
         tasks.task1_1_1();
         tasks.task1_1_2();
         tasks.task1_1_3(args); // Main -> Edit configurations -> Program Arguments -> Your input
@@ -13,7 +14,7 @@ public class MainChapter1 {
         tasks.task1_1_8();
         tasks.task1_1_9(52);   //Converting from decimal to binary
         tasks.task1_1_10();
-        ////////////////
+
         boolean[][] arr1_1_10 = {
                 {true, false, true, true},
                 {true, true, true, true},
@@ -21,9 +22,9 @@ public class MainChapter1 {
                 {true, false, false, true}
         };
         tasks.task1_1_11(arr1_1_10);
-        /////////////////
+
         tasks.task1_1_12();
-        /////////////////
+
         int[][] arr1_1_13 = {
                 {1, 2, 3, 4, 5},
                 {5, 7, 9, 8, 6},
@@ -31,8 +32,13 @@ public class MainChapter1 {
                 {2, 3, 2, 3, 9}
         };
         tasks.task1_1_13(arr1_1_13);
-        /////////////////
-        tasks.task1_1_14(2);*/
-        tasks.task1_1_15();
+
+        tasks.task1_1_14(2);
+
+        int[] arr1_1_15 = {1, 1, 2, 3, 1, 2, 3, 5, 6}; int M = 6;
+        tasks.task1_1_15(arr1_1_15, M);
+
+        tasks.task1_1_16(6);
+        tasks.task1_1_17();
     }
 }
