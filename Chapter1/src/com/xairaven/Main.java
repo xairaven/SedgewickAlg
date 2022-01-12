@@ -10,6 +10,10 @@ public class Main {
         tasks.task114();
         tasks.task115(0.5, 1);
         tasks.task116();
-        tasks.task117();*/
+        tasks.task117();
+        tasks.task118();
+        tasks.task119(52);   //Converting from decimal to binary
+        tasks.task1110();*/
+
     }
 }

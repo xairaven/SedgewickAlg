@@ -64,7 +64,7 @@ public class Tasks {
         System.out.print("\n\n");
     }
 
-     public void task117() {
+    public void task117() {
         System.out.println("-- Task 1.1.7 --");
         System.out.print("\ta)");
         double t = 9.0;
@@ -89,6 +89,38 @@ public class Tasks {
         }
         StdOut.printf("\t%d\n", sum);*/
         StdOut.printf("\tError.");
-     }
+        System.out.print("\n\n");
+    }
 
+    public void task118() {
+        System.out.println("-- Task 1.1.8 --");
+        System.out.print("\ta)\t");
+        System.out.print('b');
+        System.out.print("\n\tb)\t");
+        System.out.print('b' + 'c');
+        System.out.print("\n\tc)\t");
+        System.out.print((char) ('a' + 4));
+        System.out.print("\n\n");
+    }
+
+    public void task119 (int N) {
+        System.out.println("-- Task 1.1.8 --");
+        String s = "";
+        for (int n = N; n > 0; n /= 2) {
+            s = (n % 2) + s;
+        }
+        System.out.println(s);
+        System.out.print("\n\n");
+    }
+
+    public void task1110() {
+        System.out.println("-- Task 1.1.10 --");
+        /*
+        int[] a;
+        for (int i = 0; i < 10; i++) {
+            a[i] = i * i;
+        }*/
+        System.out.println("Variable a might not be initialised");
+        System.out.print("\n\n");
+    }
 }
