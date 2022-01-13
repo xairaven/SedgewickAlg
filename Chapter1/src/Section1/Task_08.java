@@ -1,7 +1,7 @@
 package Section1;
 //12.01.2021
 //Ex. 1.1.8
-public class Task_8 {
+public class Task_08 {
     public static void main() {
         System.out.println("-- Task 1.1.8 --");
         System.out.print("\ta)\t");

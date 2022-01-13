@@ -2,15 +2,15 @@ package Section1;
 
 public class MainSection1 {
     public static void main(String[] args) {
-        Task_1.main();
-        Task_2.main();
-        Task_3.main(args); // Main -> Edit configurations -> Program Arguments -> Your input
-        Task_4.main();
-        Task_5.main(0.5, 1);
-        Task_6.main();
-        Task_7.main();
-        Task_8.main();
-        Task_9.main(52); //Converting from decimal to binary
+        Task_01.main();
+        Task_02.main();
+        Task_03.main(args); // Main -> Edit configurations -> Program Arguments -> Your input
+        Task_04.main();
+        Task_05.main(0.5, 1);
+        Task_06.main();
+        Task_07.main();
+        Task_08.main();
+        Task_09.main(52); //Converting from decimal to binary
         Task_10.main();
 
         boolean[][] arrTask11 = {

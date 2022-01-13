@@ -2,7 +2,7 @@ package Section1;
 import edu.princeton.cs.introcs.StdOut;
 //11.01.2021
 //Ex. 1.1.6
-public class Task_6 {
+public class Task_06 {
     public static void main() {
         System.out.println("-- Task 1.1.6 --");
         int f = 0;

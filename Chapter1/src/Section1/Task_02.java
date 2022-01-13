@@ -1,7 +1,7 @@
 package Section1;
 //11.01.2021
 //Ex. 1.1.2
-public class Task_2 {
+public class Task_02 {
     public static void main() { //11.01.2021
         System.out.println("-- Task 1.1.2 --");
         System.out.println((1 + 2.236) / 2);

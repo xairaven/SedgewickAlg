@@ -1,7 +1,7 @@
 package Section1;
 //12.01.2021
 //Ex. 1.1.9
-public class Task_9 {
+public class Task_09 {
     public static void main(int N) {
         System.out.println("-- Task 1.1.9 --");
         String s = "";
