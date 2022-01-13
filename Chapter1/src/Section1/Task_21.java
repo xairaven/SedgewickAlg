@@ -1,7 +1,7 @@
 package Section1;
 import edu.princeton.cs.introcs.In;
 import edu.princeton.cs.introcs.StdOut;
-//12.01.2021
+//12.01.2022
 //Ex. 1.1.21
 public class Task_21 {
     public static void main() {

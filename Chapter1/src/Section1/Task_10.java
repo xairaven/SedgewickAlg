@@ -1,5 +1,5 @@
 package Section1;
-//12.01.2021
+//12.01.2022
 //Ex. 1.1.10
 public class Task_10 {
     public static void main() {

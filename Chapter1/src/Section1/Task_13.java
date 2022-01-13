@@ -1,9 +1,15 @@
 package Section1;
-//12.01.2021
+//12.01.2022
 //Ex. 1.1.13
 public class Task_13 {
-    public static void main(int[][] arr) {
+    public static void main() {
         System.out.println("-- Task 1.1.13 --");
+        int[][] arr = {
+                {1, 2, 3, 4, 5},
+                {5, 7, 9, 8, 6},
+                {1, 5, 6, 7, 7},
+                {2, 3, 2, 3, 9}
+        };
         int[][] resultArr = matrixTranspose(arr);
         for (int i = 0; i < resultArr.length; i++) {
             for (int j = 0; j < resultArr[0].length; j++) {

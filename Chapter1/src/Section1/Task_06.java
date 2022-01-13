@@ -1,6 +1,6 @@
 package Section1;
 import edu.princeton.cs.introcs.StdOut;
-//11.01.2021
+//11.01.2022
 //Ex. 1.1.6
 public class Task_06 {
     public static void main() {
