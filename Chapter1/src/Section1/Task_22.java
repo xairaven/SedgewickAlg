@@ -7,7 +7,7 @@ public class Task_22 {
     public static void main() {
         System.out.println("-- Task 1.1.22 --");
         int[] arr = {1, 2, 4, 5, 6, 7}; //Array should be sorted
-        int key = 4;
+        int key = 5;
         Arrays.sort(arr);
         int resultIndex = rank(key, arr, 0, arr.length-1, 0);
         StdOut.printf("\nResult index = %d", resultIndex);
@@ -18,7 +18,10 @@ public class Task_22 {
         if (indexDepth != 0) {
             StdOut.println();
         }
-        StdOut.printf("lo: %d\thi: %d", lo, hi);
+        for(int i = 0; i < indexDepth; i++) {
+            StdOut.print(" ");
+        }
+        StdOut.printf("lo: %d    hi: %d", lo, hi);
         if (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             if (key < arr[mid]) {
