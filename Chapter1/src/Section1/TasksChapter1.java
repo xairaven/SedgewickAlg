@@ -3,49 +3,6 @@ import edu.princeton.cs.introcs.*;
 import java.util.Arrays;
 
 public class TasksChapter1 {
-
-    public void task1_1_2() {
-        System.out.println("-- Task 1.1.2 --");
-        System.out.println((1 + 2.236) / 2);
-        System.out.println(1 + 2 + 3 + 4.0);
-        System.out.println(4.1 > 4);
-        System.out.println(1 + 2 + "3");
-        System.out.print("\n\n");
-    }
-
-    public void task1_1_3(String[] args) {
-        System.out.println("-- Task 1.1.3 --");
-        if (args.length == 3) {
-            if(args[0].equals(args[1]) && args[1].equals(args[2])) {
-                System.out.println("Equals");
-            } else {
-                System.out.println("Doesn't equals");
-            }
-        } else {
-            System.out.println("Number of args != 3");
-        }
-        System.out.print("\n\n");
-    }
-
-    public void task1_1_4() {
-        System.out.println("-- Task 1.1.4 --");
-        System.out.println("if (a>b) then c < 0\n\t\tKey word then is not part of construction IF");
-        System.out.println("a > b { c = 0; }\n\t\tMissing IF");
-        System.out.println("(a > b) c = 0;\n\t\tMissing IF");
-        System.out.println("(a > b) c = 0 else b = 0;\n\t\tMissing IF");
-        System.out.print("\n\n");
-    }
-
-    public void task1_1_5(double x, double y) {
-        System.out.println("-- Task 1.1.5 --");
-        if ((x >= 0 && x <=1) && (y >= 0 && y <= 1)) {
-            System.out.println("True");
-        } else {
-            System.out.println("False");
-        }
-        System.out.print("\n\n");
-    }
-
     public void task1_1_6() {
         System.out.println("-- Task 1.1.6 --");
         int f = 0;

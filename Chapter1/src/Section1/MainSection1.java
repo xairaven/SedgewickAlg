@@ -3,13 +3,12 @@ package Section1;
 public class MainSection1 {
     public static void main(String[] args) {
         TasksChapter1 tasks = new TasksChapter1();
+        Task_1.main();
+        Task_2.main();
+        Task_3.main(args); // Main -> Edit configurations -> Program Arguments -> Your input
+        Task_4.main();
+        Task_5.main(0.5, 1);
         /*
-        Task1_1_1.main();
-
-        tasks.task1_1_2();
-        tasks.task1_1_3(args); // Main -> Edit configurations -> Program Arguments -> Your input
-        tasks.task1_1_4();
-        tasks.task1_1_5(0.5, 1);
         tasks.task1_1_6();
         tasks.task1_1_7();
         tasks.task1_1_8();
