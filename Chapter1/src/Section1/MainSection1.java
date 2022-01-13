@@ -1,10 +1,11 @@
-package com.xairaven;
+package Section1;
 
-public class MainChapter1 {
+public class MainSection1 {
     public static void main(String[] args) {
         TasksChapter1 tasks = new TasksChapter1();
+        /*
+        Task1_1_1.main();
 
-        tasks.task1_1_1();
         tasks.task1_1_2();
         tasks.task1_1_3(args); // Main -> Edit configurations -> Program Arguments -> Your input
         tasks.task1_1_4();
@@ -44,5 +45,7 @@ public class MainChapter1 {
         tasks.task1_1_19();
         tasks.task1_1_20(5);
         tasks.task1_1_21(); //USER INPUT
+         */
+
     }
 }

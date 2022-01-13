@@ -1,15 +1,8 @@
-package com.xairaven;
+package Section1;
 import edu.princeton.cs.introcs.*;
 import java.util.Arrays;
 
 public class TasksChapter1 {
-    public void task1_1_1() { //11.01.2021
-        System.out.println("-- Task 1.1.1 --");
-        System.out.println((0 + 15) / 2);
-        System.out.println(2.0e-6 * 100000000.1);
-        System.out.println(true && false || true && true);
-        System.out.print("\n\n");
-    }
 
     public void task1_1_2() {
         System.out.println("-- Task 1.1.2 --");
