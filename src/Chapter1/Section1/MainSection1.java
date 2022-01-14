@@ -22,12 +22,12 @@ public class MainSection1 {
         Task_18.main();
         Task_19.main();
         Task_20.main(5);
-        Task_21.main();     //User input from keyboard
+        //Task_21.main();     //User input from keyboard
         Task_22.main();     //User input in method
         Task_23.main();
         Task_24.main(args); // Main -> Edit configurations -> Program Arguments -> Your input
         Task_25.main();
         Task_26.main(1,3,2,4); // a, b, c, t
-        Task_27.main();
+        Task_27.main();     //User input in method
     }
 }

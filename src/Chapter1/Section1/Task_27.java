@@ -3,7 +3,9 @@ package Chapter1.Section1;
 //Ex. 1.1.27
 public class Task_27 {
     public static void main() {
+        System.out.println("-- Task 1.1.27 --");
         System.out.println(binomialEnhancedStart(100, 50, 0.5));
+        System.out.print("\n\n");
     }
 
     public static double binomial(int N, int k, double p) {
