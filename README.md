@@ -7,5 +7,5 @@ If you find anything incorrect you can create an issue or open a pull request.<b
 I used the 2019 edition in Russian. The order of assignments may vary from edition to edition.<br><br>
 **This repository is free and redistributable.**<br>**Not used commercially**
 
-- <a href = "https://github.com/xairaven/SedgewickAlg/tree/main/Chapter1">Chapter 1</a>
+- <a href = "https://github.com/xairaven/SedgewickAlg/tree/main/src/Chapter1">Chapter 1</a>
 - Work in progress
