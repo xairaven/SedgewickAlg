@@ -1,4 +1,4 @@
-package Section1;
+package Chapter1.Section1;
 import edu.princeton.cs.introcs.StdOut;
 import java.util.Arrays;
 //13.01.2022

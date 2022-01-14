@@ -1,4 +1,4 @@
-package Section1;
+package Chapter1.Section1;
 import java.util.Arrays;
 //12.01.2022
 //Ex. 1.1.15

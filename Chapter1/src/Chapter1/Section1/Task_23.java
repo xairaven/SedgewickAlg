@@ -1,4 +1,4 @@
-package Section1;
+package Chapter1.Section1;
 //13.01.2022
 //Ex. 1.1.23
 public class Task_23 {

@@ -1,4 +1,4 @@
-package Section1;
+package Chapter1.Section1;
 
 public class MainSection1 {
     public static void main(String[] args) {
@@ -27,5 +27,7 @@ public class MainSection1 {
         Task_23.main();
         Task_24.main(args); // Main -> Edit configurations -> Program Arguments -> Your input
         Task_25.main();
+        Task_26.main(1,3,2,4); // a, b, c, t
+        Task_27.main();
     }
 }

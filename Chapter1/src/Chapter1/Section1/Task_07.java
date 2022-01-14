@@ -1,4 +1,4 @@
-package Section1;
+package Chapter1.Section1;
 import edu.princeton.cs.introcs.StdOut;
 //12.01.2022
 //Ex. 1.1.7
