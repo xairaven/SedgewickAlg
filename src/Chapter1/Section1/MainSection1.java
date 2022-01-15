@@ -1,10 +1,10 @@
 package Chapter1.Section1;
 
 public class MainSection1 {
-    public static void main(String[] args) { //RUN TASKS SEPARATELY
-        Task_01.main();
+    public static void main(String[] args) {
+        Task_01.main();                   //RUN TASKS SEPARATELY
         Task_02.main();
-        Task_03.main(args);               // Main -> Edit configurations -> Program Arguments -> Your input
+        Task_03.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
         Task_04.main();
         Task_05.main(0.5, 1);
         Task_06.main();
@@ -25,15 +25,15 @@ public class MainSection1 {
         Task_21.main();                   //User input from keyboard
         Task_22.main();                   //User input in method
         Task_23.main();
-        Task_24.main(args);               // Main -> Edit configurations -> Program Arguments -> Your input
+        Task_24.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
         Task_25.main();
-        Task_26.main(1,3,2,4); // a, b, c, t
+        Task_26.main(1,3,2,4); //a, b, c, t
         Task_27.main();                   //User input in method
         Task_28.main();                   //User input in method
         Task_29.main();                   //User input in method
         Task_30.main(5);
-        Task_31.main(args);               // Main -> Edit configurations -> Program Arguments -> Your input
-        Task_32.main(args);               // Main -> Edit configurations -> Program Arguments -> Your input
+        Task_31.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
+        Task_32.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
         Task_33.main();                   //User input in method
     }
 }
