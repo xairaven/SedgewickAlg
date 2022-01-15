@@ -1,7 +1,7 @@
 package Chapter1.Section1;
 
 public class MainSection1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) { //RUN TASKS SEPARATELY
         Task_01.main();
         Task_02.main();
         Task_03.main(args);               // Main -> Edit configurations -> Program Arguments -> Your input
@@ -33,6 +33,7 @@ public class MainSection1 {
         Task_29.main();                   //User input in method
         Task_30.main(5);
         Task_31.main(args);               // Main -> Edit configurations -> Program Arguments -> Your input
-        //Task_32.main(args);
+        Task_32.main(args);               // Main -> Edit configurations -> Program Arguments -> Your input
+        Task_33.main();                   //User input in method
     }
 }
