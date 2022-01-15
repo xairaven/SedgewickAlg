@@ -10,7 +10,7 @@ public class MainSection1 {
         Task_06.main();
         Task_07.main();
         Task_08.main();
-        Task_09.main(52);              //Converting from decimal to binary
+        Task_09.main(52);                 //Converting from decimal to binary
         Task_10.main();
         Task_11.main();                   //User input in method
         Task_12.main();
@@ -27,7 +27,7 @@ public class MainSection1 {
         Task_23.main();
         Task_24.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
         Task_25.main();
-        Task_26.main(1,3,2,4); //a, b, c, t
+        Task_26.main(1,3,2,4);            //a, b, c, t
         Task_27.main();                   //User input in method
         Task_28.main();                   //User input in method
         Task_29.main();                   //User input in method
