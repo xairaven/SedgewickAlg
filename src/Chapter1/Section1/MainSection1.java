@@ -1,7 +1,11 @@
 package Chapter1.Section1;
 
+import edu.princeton.cs.introcs.In;
+
+import java.util.Arrays;
+
 public class MainSection1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) { /*
         Task_01.main();                   //RUN TASKS SEPARATELY
         Task_02.main();
         Task_03.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
@@ -36,5 +40,15 @@ public class MainSection1 {
         Task_32.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
         Task_33.main();                   //User input in method
         Task_34.main();
+        Task_35.main();                   //User input in method. N = ~6_000_002
+        Task_36.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
+        Task_37.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input */
+        //Task_38.main(args);               //resources/largeW.txt
+        In in = new In(args[0]);
+        int[] array = in.readAllInts();
+        Arrays.sort(array);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 }

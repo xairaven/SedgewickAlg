@@ -3,7 +3,7 @@ package Chapter1.Section1;
 //Ex. 1.1.34
 public class Task_34 {
     public static void main() {
-        System.out.println("-- Task 1.1.33 --");
+        System.out.println("-- Task 1.1.34 --");
         System.out.println("Print the maximum and minimum numbers:");
         System.out.println("\tTwo ints: max and min, two if-else constructions.\n");
         System.out.println("Print the median of the numbers:");
