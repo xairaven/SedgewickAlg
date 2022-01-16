@@ -3,6 +3,7 @@ package Chapter1.Section1;
 //Ex. 1.1.33
 public class Task_33 {
     public static void main() {
+        System.out.println("-- Task 1.1.33 --");
         double[] X = {5, 6, 7};
         double[] Y = {1, 2, 3};
         System.out.printf("Inner product of X(5, 6, 7) and Y(1, 2, 3) is %.0f\n", Matrix.dot(X, Y));
@@ -42,6 +43,7 @@ public class Task_33 {
         for (int i = 0; i < YB.length; i++) {
             System.out.printf("%.1f\t", YB[i]);
         }
+        System.out.print("\n\n");
     }
 }
 

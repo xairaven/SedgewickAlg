@@ -35,5 +35,6 @@ public class MainSection1 {
         Task_31.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
         Task_32.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
         Task_33.main();                   //User input in method
+        Task_34.main();
     }
 }
