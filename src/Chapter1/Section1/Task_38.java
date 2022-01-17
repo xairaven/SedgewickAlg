@@ -6,7 +6,11 @@ import edu.princeton.cs.introcs.In;
 public class Task_38 {
     public static void main(String[] args) {
         System.out.println("-- Task 1.1.38 --");
-        int key = 760788;
+        if(args.length < 1) {
+            System.out.println("Main -> Edit configurations -> Program Arguments -> resources/largeW.txt");
+            System.exit(0);
+        }
+        int key = 785481;
         In in = new In(args[0]);
         int[] array = in.readAllInts();
         Arrays.sort(array);
@@ -19,11 +23,13 @@ public class Task_38 {
         System.out.printf("BinarySearch: %d\n", binarySearch(key, array, 0, array.length - 1));
         endTime = System.nanoTime();
         duration = (endTime - startTime);
-        System.out.printf("Duration: %d nanoseconds.\n", duration);
+        System.out.printf("Duration: %d nanoseconds.\n\n", duration);
+        System.out.println("You can check results in largeWSorted.txt");
+        System.out.println("Main -> Edit configurations -> Program Arguments -> resources/largeW.txt");
         System.out.println("\n");
     }
 
-    private static int bruteForceSearch(int key, int[] array) {
+    public static int bruteForceSearch(int key, int[] array) {
         if (array == null) throw new IllegalArgumentException();
         int result = -1;
         for (int i = 0; i < array.length; i++) {
@@ -34,7 +40,7 @@ public class Task_38 {
         return result;
     }
 
-    private static int binarySearch(int key, int[] arr, int lo, int hi) {
+    public static int binarySearch(int key, int[] arr, int lo, int hi) {
         if (arr == null) throw new IllegalArgumentException();
         if (lo <= hi) {
             int middle = lo + (hi - lo) / 2;
