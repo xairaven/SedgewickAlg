@@ -36,5 +36,10 @@ public class MainSection1 {
         Task_32.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
         Task_33.main();                   //User input in method
         Task_34.main();
+        Task_35.main();                   //User input in method. N = ~6_000_002
+        Task_36.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
+        Task_37.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
+        Task_38.main(args);               //Main -> Edit configurations -> Program Arguments -> resources/largeW.txt
+        Task_39.main(args);               //Main -> Edit configurations -> Program Arguments -> Your input
     }
 }
