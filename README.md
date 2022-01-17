@@ -9,3 +9,8 @@ I used the 2019 edition in Russian. The order of assignments may vary from editi
 
 - <a href = "https://github.com/xairaven/SedgewickAlg/tree/main/src/Chapter1">Chapter 1</a>
 - Work in progress
+
+An archive that contains data files (as well as all the other ones used in the book) can be found at:
+http://algs4.cs.princeton.edu/code/algs4-data.zip
+
+Library: http://introcs.cs.princeton.edu/java/stdlib/stdlib-package.jar
