@@ -5,9 +5,13 @@ import edu.princeton.cs.introcs.StdRandom;
 //27.01.2022
 //Ex. 1.2.1
 public class Task_01 {
-    public static void main(String arg) {
+    public static void main(String[] args) {
         System.out.println("-- Task 1.2.1 --");
-        int N = Integer.parseInt(arg);
+        if (args.length < 1 || Integer.parseInt(args[0]) < 0) {
+            System.out.println("Main -> Edit configurations -> Program Arguments -> Your input (int value > 0)");
+            return;
+        }
+        int N = Integer.parseInt(args[0]);
         Point2D[] points = new Point2D[N];
         Draw(points);
         System.out.printf("The shortest distance = %.3f", shortestDistance(points));
