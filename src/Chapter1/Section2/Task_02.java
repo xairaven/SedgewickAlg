@@ -1,5 +1,5 @@
 package Chapter1.Section2;
-import edu.princeton.cs.introcs.In;
+import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Interval1D;
 //27.01.2022
 //Ex. 1.2.2

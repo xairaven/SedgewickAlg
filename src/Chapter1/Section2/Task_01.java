@@ -1,7 +1,7 @@
 package Chapter1.Section2;
 import java.awt.geom.Point2D;
-import edu.princeton.cs.introcs.StdDraw;
-import edu.princeton.cs.introcs.StdRandom;
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdRandom;
 //27.01.2022
 //Ex. 1.2.1
 public class Task_01 {
