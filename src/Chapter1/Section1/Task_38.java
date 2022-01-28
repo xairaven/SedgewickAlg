@@ -1,17 +1,13 @@
 package Chapter1.Section1;
 import java.util.Arrays;
-import edu.princeton.cs.introcs.In;
+import edu.princeton.cs.algs4.In;
 //15.01.2022
 //Ex. 1.1.38
 public class Task_38 {
-    public static void main(String[] args) {
+    public static void main() {
         System.out.println("-- Task 1.1.38 --");
-        if(args.length < 1) {
-            System.out.println("Main -> Edit configurations -> Program Arguments -> resources/largeW.txt");
-            System.exit(0);
-        }
         int key = 785481;
-        In in = new In(args[0]);
+        In in = new In("./resources/largeW.txt");
         int[] array = in.readAllInts();
         Arrays.sort(array);
         long startTime = System.nanoTime();
@@ -25,7 +21,6 @@ public class Task_38 {
         duration = (endTime - startTime);
         System.out.printf("Duration: %d nanoseconds.\n\n", duration);
         System.out.println("You can check results in largeWSorted.txt");
-        System.out.println("Main -> Edit configurations -> Program Arguments -> resources/largeW.txt");
         System.out.println("\n");
     }
 

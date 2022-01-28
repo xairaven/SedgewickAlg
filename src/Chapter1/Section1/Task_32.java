@@ -1,7 +1,7 @@
 package Chapter1.Section1;
-import edu.princeton.cs.introcs.StdDraw;
-import edu.princeton.cs.introcs.In;
-import edu.princeton.cs.introcs.StdStats;
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdStats;
 import java.util.Arrays;
 //14.01.2022
 //Ex. 1.1.32

@@ -1,5 +1,5 @@
 package Chapter1.Section1;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 //12.01.2022
 //Ex. 1.1.7
 public class Task_07 {

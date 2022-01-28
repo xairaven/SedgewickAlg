@@ -1,6 +1,6 @@
 package Chapter1.Section1;
-import edu.princeton.cs.introcs.StdDraw;
-import edu.princeton.cs.introcs.StdRandom;
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdRandom;
 //14.01.2022
 //Ex. 1.1.31
 public class Task_31 {
