@@ -12,5 +12,9 @@ public class MainSection2 {
         Task_08.main();
         Task_09.main();
         Task_10.main();
+        Task_11.main();
+        Task_12.main();
+        Task_13.main();
+        Task_14.main();
     }
 }

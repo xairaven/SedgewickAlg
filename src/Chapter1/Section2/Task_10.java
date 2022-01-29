@@ -1,14 +1,12 @@
 package Chapter1.Section2;
+import java.awt.Font;
 import edu.princeton.cs.algs4.StdDraw;
-
-import java.awt.*;
-
 //29.01.2022
 //Ex. 1.2.10
 public class Task_10 {
     public static void main() {
         System.out.println("-- Task 1.2.10 --");
-        VisualCounter visualCounter = new VisualCounter(6, 4);
+        VisualCounter visualCounter = new VisualCounter(10, 5);
         visualCounter.increment();
         visualCounter.decrement();
         visualCounter.decrement();
