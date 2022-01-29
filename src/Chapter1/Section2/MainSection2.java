@@ -1,5 +1,4 @@
 package Chapter1.Section2;
-
 //ARGS// Main -> Edit configurations -> Program Arguments -> Your input
 public class MainSection2 {
     public static void main(String[] args) {
@@ -8,5 +7,10 @@ public class MainSection2 {
         Task_03.main(args);          //For example: 6 3.3 6.1 (1 int value > 0, 2 double values)
         Task_04.main();
         Task_05.main();
+        Task_06.main();
+        Task_07.main("xairaven");    //reversing string
+        Task_08.main();
+        Task_09.main();
+        Task_10.main();
     }
 }
