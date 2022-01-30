@@ -19,5 +19,8 @@ public class MainSection2 {
         Task_15.main();
         Task_16.main();               //You should install JUnit
         Task_17.main();               //You should install JUnit
+        Task_18.main();
+        Task_13.main();
+        Task_19.main();
     }
 }
