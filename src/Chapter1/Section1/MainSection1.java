@@ -1,6 +1,5 @@
 package Chapter1.Section1;
-
-//ARGS// //Main -> Edit configurations -> Program Arguments -> Your input
+//ARGS// Main -> Edit configurations -> Program Arguments -> Your input
 public class MainSection1 {
     public static void main(String[] args) {
         Task_01.main();                   //RUN TASKS SEPARATELY
