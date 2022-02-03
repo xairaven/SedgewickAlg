@@ -1,4 +1,4 @@
-package StructuresAlgorithms;
+package StructAlgsXai;
 import java.util.Iterator;
 //Copy of implementation from my repo "Algorithms-Data-Structures"
 public class Stack<Item> implements Iterable<Item> {
