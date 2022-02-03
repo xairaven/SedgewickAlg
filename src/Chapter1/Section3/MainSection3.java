@@ -8,5 +8,9 @@ public class MainSection3 {
         Task_04.main();
         Task_05.main(50);        //int N > 0
         Task_06.main();
+        Task_07.main();
+        Task_08.main();
+        Task_09.main();
+        Task_10.main();
     }
 }

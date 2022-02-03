@@ -1,5 +1,5 @@
 package Chapter1.Section3;
-import StructAlgsXai.Stack;
+import edu.princeton.cs.algs4.Stack;
 //03.02.2022
 //Ex. 1.3.4
 public class Task_04 {

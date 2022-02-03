@@ -1,6 +1,6 @@
 package Chapter1.Section3;
-import StructAlgsXai.Stack;
-import StructAlgsXai.Queue;
+import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.Queue;
 //03.02.2022
 //Ex. 1.3.6
 public class Task_06 {
