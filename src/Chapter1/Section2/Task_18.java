@@ -15,8 +15,6 @@ public class Task_18 {
         System.out.println("Standard Deviation: " + validation.stddev() + " Expected: 1.5275252316519465");
         System.out.print("\n\n");
     }
-
-
 }
 
 class Accumulator18 {
