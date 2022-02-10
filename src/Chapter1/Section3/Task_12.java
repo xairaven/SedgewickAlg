@@ -1,7 +1,28 @@
-package StructAlgsXai;
+package Chapter1.Section3;
 import java.util.Iterator;
-//Copy of implementation from my repo "Algorithms-Data-Structures"
-public class Stack<Item> implements Iterable<Item> {
+//10.02.2022
+//Ex. 1.3.12
+public class Task_12 {
+    public static void main() {
+        System.out.println("-- Task 1.3.12 --");
+        StackEx12<String> stack = new StackEx12<>();
+        stack.push("1st");
+        stack.push("2nd");
+        stack.push("3rd");
+        StackEx12<String> copy = StackEx12.copy(stack);
+        System.out.println("Start stack:");
+        for (String s : copy) {
+            System.out.println(s);
+        }
+        System.out.println("Copy:");
+        for (String s : copy) {
+            System.out.println(s);
+        }
+        System.out.print("\n\n");
+    }
+}
+
+class StackEx12<Item> implements Iterable<Item> {
     private Node first;
     private int size;
 
@@ -14,14 +35,14 @@ public class Stack<Item> implements Iterable<Item> {
         return size == 0;
     }
 
-    public Stack<Item> copy() {
-        Stack<Item> temp = new Stack<>();
-        Stack<Item> copy = new Stack<>();
-        for (Item it : this) {
-            temp.push(it);
+    public static StackEx12<String> copy(StackEx12<String> stack) {
+        StackEx12<String> temp = new StackEx12<>();
+        StackEx12<String> copy = new StackEx12<>();
+        for (String s : stack) {
+            temp.push(s);
         }
-        for (Item it : temp) {
-            copy.push(it);
+        for (String s : temp) {
+            copy.push(s);
         }
         return copy;
     }
