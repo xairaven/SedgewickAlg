@@ -1,38 +1,42 @@
 package Chapter1.Section1;
-import edu.princeton.cs.algs4.StdOut;
 import java.util.Arrays;
-//13.01.2022
-//Ex. 1.1.22
+
+/**
+ * Ex. 1.1.22 <br>
+ * 13.01.2022
+ * @author xairaven
+ */
 public class Task_22 {
-    public static void main() {
-        System.out.println("-- Task 1.1.22 --");
+    public static void main(String[] args) {
+        System.out.println("-- Exercise 1.1.22 --");
+
         int[] arr = {1, 2, 4, 5, 6, 7}; //Array should be sorted
-        int key = 5;
         Arrays.sort(arr);
-        int resultIndex = rank(key, arr, 0, arr.length-1, 0);
-        StdOut.printf("\nResult index = %d", resultIndex);
-        System.out.print("\n\n");
+        int key = 7;
+        int index = binarySearch(key, arr);
+        System.out.printf("\nResult index = %d", index);
     }
 
-    public static int rank(int key, int[] arr, int lo, int hi, int indexDepth) {
-        if (indexDepth != 0) {
-            StdOut.println();
+    private static int binarySearch(int key, int[] arr) {
+        return rank(key, arr, 0, arr.length-1, 0);
+    }
+
+    private static int rank(int key, int[] arr, int lo, int hi, int depth) {
+        if (depth != 0) {
+            System.out.println();
         }
-        for(int i = 0; i < indexDepth; i++) {
-            StdOut.print(" ");
+        for (int i = 0; i < depth; i++) {
+            System.out.print(" ");
         }
-        StdOut.printf("lo: %d    hi: %d", lo, hi);
+        System.out.printf("lo: %d  <->  hi: %d", lo, hi);
+
         if (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             if (key < arr[mid]) {
-                return rank(key, arr, lo, mid-1, ++indexDepth);
+                return rank(key, arr, lo, mid-1, ++depth);
             } else if (key > arr[mid]) {
-                return rank(key, arr, mid+1, hi, ++indexDepth);
-            } else {
-                return mid;
-            }
-        } else {
-            return -1;
-        }
+                return rank(key, arr, mid+1, hi, ++depth);
+            } else return mid;
+        } else return -1;
     }
 }

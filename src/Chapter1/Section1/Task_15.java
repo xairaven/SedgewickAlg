@@ -1,28 +1,38 @@
 package Chapter1.Section1;
 import java.util.Arrays;
-//12.01.2022
-//Ex. 1.1.15
+
+/**
+ * Ex. 1.1.15 <br>
+ * 12.01.2022
+ * @author xairaven
+ */
 public class Task_15 {
-    public static void main() {
-        System.out.println("-- Task 1.1.15 --");
-        int[] arr = {1, 1, 2, 3, 1, 2, 3, 5, 6}; int M = 6;
-        int[] a = histogram(arr, M);
-        for (int i = 0; i < a.length; i++) {
-            System.out.printf("%d\t", a[i]);
-        }
-        System.out.print("\n\n");
+    public static void main(String[] args) {
+        System.out.println("-- Exercise 1.1.15 --");
+        int[] arr = {1, 1, 2, 3, 1, 2, 3, 5, 5};
+        int M = 6;
+
+        int[] histogram = histogram(arr, M);
+        System.out.println(Arrays.toString(histogram));
     }
 
-    public static int[] histogram(int[] a, int M) {
-        int[] mArr = new int[M];
-        Arrays.sort(a);
-        for (int i = 0; i < a.length && i < M; i++) {
-            for (int j = 0; j < a.length; j++) {
-                if (a[j] == i) {
-                    mArr[i]++;
-                }
+    private static int[] histogram(int[] a, int M) {
+        int[] histogram = new int[M];
+        for (int number : a) {
+            if (number < M) {
+                histogram[number]++;
             }
         }
-        return mArr;
+
+        return histogram;
     }
 }
+
+/*
+Initial array:
+1 1 2 3 1 2 3 5 5
+M = 6
+
+Histogram:
+0 3 2 2 0 2
+ */

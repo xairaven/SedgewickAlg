@@ -1,24 +1,35 @@
 package Chapter1.Section1;
-//12.01.2022
-//Ex. 1.1.14
+
+/**
+ * Ex. 1.1.14 <br>
+ * 12.01.2022
+ * @author xairaven
+ */
 public class Task_14 {
-    public static void main(int N) {
-        System.out.println("-- Task 1.1.14 --");
-        System.out.println((lg(N)));
-        System.out.print("\n\n");
+    public static void main(String[] args) {
+        System.out.println("-- Exercise 1.1.14 --");
+        System.out.println("Input: 2\nResult: " + lg(2) + "\n");
+        System.out.println("Input: 10\nResult: " + lg(10) + "\n");
+        System.out.println("Input: 88\nResult: " + lg(88) + "\n");
     }
 
-    public static int lg(int N) {
-        int lg = 2;
-        int x = 1;
-        for(int i = 1; lg < N; i++) {
-            lg *= 2;
-            x++;
+    private static int lg(int N) {
+        int lg = 0;
+        while (N > 0) {
+            lg++;
+            N /= 2;
         }
-        if (lg == N) {
-            return x;
-        } else {
-            return x-1;
-        }
+        return lg - 1;
     }
 }
+
+/*
+Input: 2
+Result: 1
+
+Input: 10
+Result: 3
+
+Input: 88
+Result: 6
+ */

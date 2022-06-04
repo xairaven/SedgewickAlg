@@ -1,22 +1,25 @@
 package Chapter1.Section1;
 import java.util.Arrays;
-//14.01.2022
-//Ex. 1.1.28
+
+/**
+ * Ex. 1.1.28 <br>
+ * 14.01.2022
+ * @author xairaven
+ */
 public class Task_28 {
-    public static void main() {
-        System.out.println("-- Task 1.1.28 --");
-        int[] arr = {1, 2, 1, 3, 4, 5, 2, 3, 4, 4, 5, 6, 7}; //Array should be sorted
+    public static void main(String[] args) {
+        System.out.println("-- Exercise 1.1.28 --");
+        int[] whitelist = {1, 2, 1, 3, 4, 5, 2, 3, 4, 4, 5, 6, 7}; //Array should be sorted
         int key = 5;
-        Arrays.sort(arr);
-        for(int i = 1; i < arr.length; i++) {
-            if (arr[i] == arr[i - 1]) {
-               arr = deleteElem(arr, i);
+        Arrays.sort(whitelist );
+        for(int i = 1; i < whitelist .length; i++) {
+            if (whitelist [i] == whitelist [i - 1]) {
+                whitelist  = deleteElem(whitelist , i);
                i--;
             }
         }
-        int resultIndex = Task_22.rank(key, arr, 0, arr.length-1, 0);
+        int resultIndex = rank(key, whitelist, 0, whitelist.length-1, 0);
         System.out.printf("\nResult index = %d", resultIndex);
-        System.out.print("\n\n");
     }
 
     public static int[] deleteElem(int[] arr, int index) {
@@ -29,5 +32,24 @@ public class Task_28 {
             }
         }
         return resultArray;
+    }
+
+    private static int rank(int key, int[] arr, int lo, int hi, int depth) {
+        if (depth != 0) {
+            System.out.println();
+        }
+        for (int i = 0; i < depth; i++) {
+            System.out.print(" ");
+        }
+        System.out.printf("lo: %d  <->  hi: %d", lo, hi);
+
+        if (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (key < arr[mid]) {
+                return rank(key, arr, lo, mid-1, ++depth);
+            } else if (key > arr[mid]) {
+                return rank(key, arr, mid+1, hi, ++depth);
+            } else return mid;
+        } else return -1;
     }
 }

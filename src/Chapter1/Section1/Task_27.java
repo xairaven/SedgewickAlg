@@ -1,20 +1,29 @@
 package Chapter1.Section1;
-//14.01.2022
-//Ex. 1.1.27
+
+/**
+ * Ex. 1.1.27 <br>
+ * 14.01.2022
+ * @author xairaven
+ */
 public class Task_27 {
-    public static void main() {
-        System.out.println("-- Task 1.1.27 --");
-        System.out.println(binomialEnhancedStart(100, 50, 0.5));
-        System.out.print("\n\n");
+    static int calls;
+
+    public static void main(String[] args) {
+        System.out.println("-- Exercise 1.1.27 --");
+        //binomial(100, 50, 0.25);
+        System.out.printf("For binomial(100, 50, 0.25) the estimate is around %s calls\n", "5_000_000_000");
+        System.out.println("But, this can be faster\nBinomial(100, 50, 0.25) = " +
+                binomialEnhancedStart(100, 50, 0.25));
     }
 
-    public static double binomial(int N, int k, double p) {
+    private static double binomial(int N, int k, double p) {
+        calls++;
         if (N == 0 && k == 0) return 1.0;
         if (N < 0 || k < 0) return 0.0;
         return (1.0 - p)*binomial(N-1, k, p) + p*binomial(N-1, k-1, p);
     }
 
-    public static double binomialEnhancedStart(int N, int k, double p) {
+    private static double binomialEnhancedStart(int N, int k, double p) {
         double[][] arr = new double[N + 1][k + 1];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
@@ -24,7 +33,7 @@ public class Task_27 {
         return binomialEnhanced(arr, N, k, p);
     }
 
-    public static double binomialEnhanced(double[][] arr, int N, int k, double p) {
+    private static double binomialEnhanced(double[][] arr, int N, int k, double p) {
         if ((N == 0) && (k == 0)) return 1.0;
         if ((N < 0) || (k < 0)) return 0.0;
         if (arr[N][k] == -1) {
@@ -32,5 +41,11 @@ public class Task_27 {
         }
         return arr[N][k];
     }
-
 }
+
+/*
+Result:
+For binomial(100, 50, 0.25) the estimate is around 5_000_000_000 calls
+But, this can be faster
+Binomial(100, 50, 0.25) = 4.507310875086383E-8
+ */

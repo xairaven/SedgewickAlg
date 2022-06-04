@@ -1,25 +1,50 @@
 package Chapter1.Section1;
-//12.01.2022
-//Ex. 1.1.11
+
+/**
+ * Ex. 1.1.11 <br>
+ * 12.01.2022
+ * @author xairaven
+ */
 public class Task_11 {
-    public static void main() {
-        boolean[][] a = {
-                {true, false, true, true},
-                {true, true, true, true},
-                {false, false, true, true},
-                {true, false, false, true}
+    public static void main(String[] args) {
+        System.out.println("-- Exercise 1.1.11 --");
+
+        boolean[][] arr = {
+                {true,  false,  true,   true},
+                {true,  true,   true,   true},
+                {false, false,  true,   true},
+                {true,  false,  false,  true}
         };
-        System.out.println("-- Task 1.1.11 --");
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[0].length; j++) {
-                if (a[i][j]) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
-            }
-            System.out.print("\n");
+        printArray(arr);
+    }
+
+    private static void printArray(boolean[][] arr) {
+        System.out.print("   ");
+        int max = 0;
+        for (boolean[] rows : arr) {
+            if (rows.length > max) max = rows.length;
         }
-        System.out.print("\n\n");
+        for (int i = 1; i <= max; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.printf("%d: ", i+1);
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j]) System.out.print("* ");
+                else System.out.print("  ");
+            }
+            System.out.println();
+        }
     }
 }
+
+/*
+Result:
+   1 2 3 4
+1: *   * *
+2: * * * *
+3:     * *
+4: *     *
+ */
