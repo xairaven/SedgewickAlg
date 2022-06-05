@@ -1,18 +1,19 @@
 package Chapter1.Section1;
 import edu.princeton.cs.algs4.StdRandom;
-//15.01.2022
-//Ex. 1.1.36
+
+/**
+ * Ex. 1.1.36 <br>
+ * 15.01.2022
+ * @author xairaven
+ */
 public class Task_36 {
     public static void main(String[] args) {
-        System.out.println("-- Task 1.1.36 --");
-        if(args.length < 2) {
-            System.out.println("Input 2 int values in command prompt.");
-            System.out.println("For example: 5 10000\n");
-            System.out.println("Main -> Edit configurations -> Program Arguments -> Your input");
-            System.exit(0);
-        }
-        int M = Integer.parseInt(args[0]); //arr.length
-        int N = Integer.parseInt(args[1]);
+        System.out.println("-- Exercise 1.1.36 --");
+        if(args.length != 2) throw new IllegalArgumentException("must input 2 args");
+
+        int M = Integer.parseInt(args[0]); // arr.length
+        int N = Integer.parseInt(args[1]); // shuffles
+
         int[][] positions = new int[M][M];
         double[] arr = new double[M];
         for (int i = 0; i < N; i++) {
@@ -22,17 +23,11 @@ public class Task_36 {
                 positions[(int) arr[j]][j]++;
             }
         }
-        for (int i = 0; i < positions.length; i++) {
-            System.out.printf("%2d:  ", i);
-            for (int j = 0; j < positions[0].length; j++) {
-                System.out.printf("%d\t", positions[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println("\n");
+
+        showArray(positions);
     }
 
-    public static void shuffle(double[] a) {
+    private static void shuffle(double[] a) {
         int M = a.length;
         for (int i = 0; i < M; i++) {
             int r = i + StdRandom.uniform(M - i);
@@ -42,9 +37,32 @@ public class Task_36 {
         }
     }
 
-    public static void initializeArray(double[] a) {
+    private static void initializeArray(double[] a) {
         for (int i = 0; i < a.length; i++) {
             a[i] = i;
         }
     }
+
+    private static void showArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.printf("%2d:  ", i);
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.printf("%d\t", arr[i][j]);
+            }
+            System.out.println();
+        }
+    }
 }
+
+/*
+Main -> Edit configurations -> Program Arguments -> Your input
+Example of input (command prompt):
+5 10000
+
+Example of result:
+ 0:  2010	1925	2044	1970	2051
+ 1:  1973	2013	1992	2032	1990
+ 2:  1999	2036	1990	1988	1987
+ 3:  2012	2042	1971	2001	1974
+ 4:  2006	1984	2003	2009	1998
+*/
