@@ -1,108 +1,83 @@
 package Chapter1.Section2;
-//30.01.2022
-//Ex. 1.2.16
-public class Task_16 {
-    public static void main() {
-        System.out.println("-- Task 1.2.16 --");
-        System.out.println("If you want to test class, install JUnit and run Task_16_TEST");
-        System.out.print("\n\n");
-    }
-}
+import Chapter1.Section2.Structures.RationalSO;
+import static org.junit.jupiter.api.Assertions.*;
 
-class RationalStackOverflow {
-    private final long numerator;
-    private final long denominator;
+/**
+ * Ex. 1.2.16 <br>
+ * 30.01.2022
+ * @author xairaven
+ */
+class Task_16 {
+    RationalSO rational1 = new RationalSO(1, 4);
+    RationalSO rational2 = new RationalSO(2, 3);
 
-    public RationalStackOverflow(int numerator, int denominator) {
-        if (denominator == 0) {
-            throw new RuntimeException("Denominator cannot be 0");
-        }
-
-        int gcd = gcd(numerator, denominator);
-        numerator /= gcd;
-        denominator /= gcd;
-
-        if (denominator < 0) {
-            numerator = -1 * numerator;
-            denominator = -1 * denominator;
-        }
-
-        this.numerator = numerator;
-        this.denominator = denominator;
+    @org.junit.jupiter.api.Test
+    void plusTest1() {
+        RationalSO rationalPlus = rational1.plus(rational2);
+        String actual = rationalPlus.numerator() + "/" + rationalPlus.denominator();
+        String expected = "11/12";
+        assertEquals(expected, actual);
     }
 
-    public int numerator() {
-        return (int) this.numerator;
+    @org.junit.jupiter.api.Test
+    void minusTest1() {
+        RationalSO rationalMinus = rational1.minus(rational2);
+        String actual = rationalMinus.numerator() + "/" + rationalMinus.denominator();
+        String expected = "-5/12";
+        assertEquals(expected, actual);
     }
 
-    public int denominator() {
-        return (int) this.denominator;
+    @org.junit.jupiter.api.Test
+    void timesTest1() {
+        RationalSO rationalTimes = rational1.times(rational2);
+        String actual = rationalTimes.numerator() + "/" + rationalTimes.denominator();
+        String expected = "1/6";
+        assertEquals(expected, actual);
     }
 
-    private int gcd(int numerator, int denominator) {
-        if (denominator == 0) {
-            return numerator;
-        } else {
-            return gcd(denominator, numerator % denominator);
-        }
+    @org.junit.jupiter.api.Test
+    void dividesTest1() {
+        RationalSO rationalDividedBy = rational1.divides(rational2);
+        String actual = rationalDividedBy.numerator() + "/" + rationalDividedBy.denominator();
+        String expected = "3/8";
+        assertEquals(expected, actual);
     }
 
-    public RationalStackOverflow plus(RationalStackOverflow b) {
-        int newNumA = this.numerator() * b.denominator();
-        int newNumB = b.numerator() * this.denominator();
-
-        int resultNum = newNumA + newNumB;
-        int resultDen = this.denominator() * b.denominator();
-
-        return new RationalStackOverflow(resultNum, resultDen);
+    @org.junit.jupiter.api.Test
+    void testEquals1() {
+        RationalSO equalRational1 = rational1;
+        boolean actual = rational1.equals(equalRational1);
+        boolean expected = true;
+        assertEquals(expected, actual);
     }
 
-    public RationalStackOverflow minus(RationalStackOverflow b) {
-        int newNumA = this.numerator() * b.denominator();
-        int newNumB = b.numerator() * this.denominator();
-
-        int resultNum = newNumA - newNumB;
-        int resultDen = this.denominator() * b.denominator();
-
-        return new RationalStackOverflow(resultNum, resultDen);
+    @org.junit.jupiter.api.Test
+    void testEquals2() {
+        RationalSO equalRational2 = new RationalSO(rational1.numerator(), rational1.denominator());
+        boolean actual = rational1.equals(equalRational2);
+        boolean expected = true;
+        assertEquals(expected, actual);
     }
 
-    public RationalStackOverflow times(RationalStackOverflow b) {
-        int resultNum = this.numerator() * b.numerator();
-        int resultDen = this.denominator() * b.denominator();
-
-        return new RationalStackOverflow(resultNum, resultDen);
+    @org.junit.jupiter.api.Test
+    void testEquals3() {
+        RationalSO nonEqualRational = new RationalSO(7, 8);
+        boolean actual = rational1.equals(nonEqualRational);
+        boolean expected = false;
+        assertEquals(expected, actual);
     }
 
-    public RationalStackOverflow divides(RationalStackOverflow b) {
-        RationalStackOverflow bInverse = new RationalStackOverflow(b.denominator(), b.numerator());
-        return times(bInverse);
+    @org.junit.jupiter.api.Test
+    void testToString1() {
+        String actual = rational1.toString();
+        String expected = "1/4";
+        assertEquals(expected, actual);
     }
 
-    @Override
-    public boolean equals(Object x) {
-        if (this == x) {
-            return true;
-        }
-        if (x == null) {
-            return false;
-        }
-        if (this.getClass() != x.getClass()) {
-            return false;
-        }
-
-        RationalStackOverflow that = (RationalStackOverflow) x;
-        if (this.numerator() != that.numerator()) {
-            return false;
-        }
-        if (this.denominator() != that.denominator()) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return this.numerator() + "/" + this.denominator();
+    @org.junit.jupiter.api.Test
+    void testToString2() {
+        String actual = rational2.toString();
+        String expected = "2/3";
+        assertEquals(expected, actual);
     }
 }

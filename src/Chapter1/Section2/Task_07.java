@@ -1,11 +1,14 @@
 package Chapter1.Section2;
-//29.01.2022
-//Ex. 1.2.7
+
+/**
+ * Ex. 1.2.7 <br>
+ * 29.01.2022
+ * @author xairaven
+ */
 public class Task_07 {
-    public static void main(String s) {
-        System.out.println("-- Task 1.2.7 --");
-        System.out.println(mystery(s));
-        System.out.print("\n\n");
+    public static void main(String[] args) {
+        System.out.println("-- Exercise 1.2.7 --");
+        System.out.println(mystery("xairaven"));
     }
 
     private static String mystery(String s) {
@@ -16,3 +19,9 @@ public class Task_07 {
         return mystery(b) + mystery(a);
     }
 }
+
+/*
+Mystery method returns reversed string.
+Example:
+mystery("xairaven") returns "nevariax"
+ */

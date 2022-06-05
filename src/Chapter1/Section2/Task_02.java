@@ -1,31 +1,42 @@
 package Chapter1.Section2;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Interval1D;
-//27.01.2022
-//Ex. 1.2.2
+
+/**
+ * Ex. 1.2.2 <br>
+ * 27.01.2022
+ * @author xairaven
+ */
 public class Task_02 {
     public static void main(String[] args) {
-        System.out.println("-- Task 1.2.2 --");
-        if (args.length < 1 || Integer.parseInt(args[0]) < 2) {
-            System.out.println("Main -> Edit configurations -> Program Arguments -> Your input (int value > 1)");
-            return;
-        }
+        System.out.println("-- Exercise 1.2.2 --");
+        if (args.length != 1 || Integer.parseInt(args[0]) < 2)
+            throw new IllegalArgumentException("must input int value that greater than 1");
+
         int N = Integer.parseInt(args[0]);
-        In in = new In();
         Interval1D[] intervals = new Interval1D[N];
-        double d1; double d2;
+
+        In in = new In();
         for(int i = 0; i < N; i++) {
             System.out.printf("Interval %d:\n", i + 1);
-            d1 = in.readDouble();
-            d2 = in.readDouble();
-            if (d2 < d1) {
-                double temp = d1;
-                d1 = d2;
-                d2 = temp;
+
+            double[] cords = {in.readDouble(), in.readDouble()};
+
+            if (cords[0] > cords[1]) {
+                double temp = cords[0];
+                cords[0] = cords[1];
+                cords[1] = temp;
             }
-            intervals[i] = new Interval1D(d1, d2);
+
+            intervals[i] = new Interval1D(cords[0], cords[1]);
         }
+
         System.out.print("\n");
+
+        intersections(N, intervals);
+    }
+
+    private static void intersections(int N, Interval1D[] intervals) {
         boolean intersects = false;
         for (int i = 0; i < N; i++) {
             for (int j = i + 1; j < N; j++) {
@@ -38,6 +49,47 @@ public class Task_02 {
             }
         }
         if (!intersects) System.out.println("Intervals don't intersect");
-        System.out.print("\n\n");
     }
 }
+
+/*
+Input (command prompt) example:
+6 (any int value > 1)
+
+Input (standard) example:
+Interval 1:
+5
+7
+Interval 2:
+4
+3
+Interval 3:
+7
+10
+Interval 4:
+23
+45
+Interval 5:
+1
+3
+Interval 6:
+5
+9
+
+Result example:
+Interval 1 intersects Interval 3
+Interval 1: 5,00 - 7,00
+Interval 3: 7,00 - 10,00
+
+Interval 1 intersects Interval 6
+Interval 1: 5,00 - 7,00
+Interval 6: 5,00 - 9,00
+
+Interval 2 intersects Interval 5
+Interval 2: 3,00 - 4,00
+Interval 5: 1,00 - 3,00
+
+Interval 3 intersects Interval 6
+Interval 3: 7,00 - 10,00
+Interval 6: 5,00 - 9,00
+ */

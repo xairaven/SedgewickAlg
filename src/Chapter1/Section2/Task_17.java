@@ -1,124 +1,84 @@
 package Chapter1.Section2;
-//30.01.2022
-//Ex. 1.2.17
-public class Task_17 {
-    public static void main() {
-        System.out.println("-- Task 1.2.17 --");
-        System.out.println("If you want to test class, install JUnit and run Task_17_TEST");
-        System.out.print("\n\n");
-    }
-}
+import Chapter1.Section2.Structures.Rational;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Rational {
-    private final long numerator;
-    private final long denominator;
-    private final static String AssertMessage = "Operation would cause stack overflow";
+/**
+ * Ex. 1.2.17 <br>
+ * 30.01.2022
+ * Rational structure located in Chapter1.Section2.Structures
+ * @author xairaven
+ */
+class Task_17 {
+    Rational rational1 = new Rational(1, 4);
+    Rational rational2 = new Rational(2, 3);
 
-    public Rational(long numerator, long denominator) {
-        if (denominator == 0) {
-            throw new RuntimeException("Denominator cannot be 0");
-        }
-
-        long gcd = gcd(numerator, denominator);
-        numerator /= gcd;
-        denominator /= gcd;
-
-        if (denominator < 0) {
-            numerator = -1 * numerator;
-            denominator = -1 * denominator;
-        }
-
-        this.numerator = numerator;
-        this.denominator = denominator;
+    @org.junit.jupiter.api.Test
+    void plusTest1() {
+        Rational rationalPlus = rational1.plus(rational2);
+        String actual = rationalPlus.numerator() + "/" + rationalPlus.denominator();
+        String expected = "11/12";
+        assertEquals(expected, actual);
     }
 
-    public long numerator() {
-        return this.numerator;
+    @org.junit.jupiter.api.Test
+    void minusTest1() {
+        Rational rationalMinus = rational1.minus(rational2);
+        String actual = rationalMinus.numerator() + "/" + rationalMinus.denominator();
+        String expected = "-5/12";
+        assertEquals(expected, actual);
     }
 
-    public long denominator() {
-        return this.denominator;
+    @org.junit.jupiter.api.Test
+    void timesTest1() {
+        Rational rationalTimes = rational1.times(rational2);
+        String actual = rationalTimes.numerator() + "/" + rationalTimes.denominator();
+        String expected = "1/6";
+        assertEquals(expected, actual);
     }
 
-    private long gcd(long numerator, long denominator) {
-        if (denominator == 0) {
-            return numerator;
-        } else {
-            return gcd(denominator, numerator % denominator);
-        }
+    @org.junit.jupiter.api.Test
+    void dividesTest1() {
+        Rational rationalDividedBy = rational1.divides(rational2);
+        String actual = rationalDividedBy.numerator() + "/" + rationalDividedBy.denominator();
+        String expected = "3/8";
+        assertEquals(expected, actual);
     }
 
-    public Rational plus(Rational b) {
-        assert this.numerator * b.denominator <= Integer.MAX_VALUE : AssertMessage;
-        assert b.numerator * this.denominator <= Integer.MAX_VALUE : AssertMessage;
-        assert this.numerator * b.denominator >= Integer.MIN_VALUE : AssertMessage;
-        assert b.numerator * this.denominator >= Integer.MIN_VALUE : AssertMessage;
-
-        long newNumA = (long) this.numerator() * b.denominator();
-        long newNumB = (long) b.numerator() * this.denominator();
-
-        long resultNum = newNumA + newNumB;
-        long resultDen = (long) this.denominator() * b.denominator();
-
-        return new Rational(resultNum, resultDen);
+    @org.junit.jupiter.api.Test
+    void testEquals1() {
+        Rational equalRational1 = rational1;
+        boolean actual = rational1.equals(equalRational1);
+        boolean expected = true;
+        assertEquals(expected, actual);
     }
 
-    public Rational minus(Rational b) {
-        assert this.numerator * b.denominator <= Integer.MAX_VALUE : AssertMessage;
-        assert b.numerator * this.denominator <= Integer.MAX_VALUE : AssertMessage;
-        assert this.numerator * b.denominator >= Integer.MIN_VALUE : AssertMessage;
-        assert b.numerator * this.denominator >= Integer.MIN_VALUE : AssertMessage;
-
-        long newNumA = this.numerator() * b.denominator();
-        long newNumB = b.numerator() * this.denominator();
-
-        long resultNum = newNumA - newNumB;
-        long resultDen = this.denominator() * b.denominator();
-
-        return new Rational(resultNum, resultDen);
+    @org.junit.jupiter.api.Test
+    void testEquals2() {
+        Rational equalRational2 = new Rational(rational1.numerator(), rational1.denominator());
+        boolean actual = rational1.equals(equalRational2);
+        boolean expected = true;
+        assertEquals(expected, actual);
     }
 
-    public Rational times(Rational b) {
-        assert this.numerator * b.numerator <= Integer.MAX_VALUE : AssertMessage;
-        assert this.numerator * b.numerator >= Integer.MIN_VALUE : AssertMessage;
-        assert this.denominator * b.denominator >= Integer.MIN_VALUE : AssertMessage;
-        assert this.denominator * b.denominator <= Integer.MAX_VALUE : AssertMessage;
-
-        long resultNum = this.numerator() * b.numerator();
-        long resultDen = this.denominator() * b.denominator();
-
-        return new Rational(resultNum, resultDen);
+    @org.junit.jupiter.api.Test
+    void testEquals3() {
+        Rational nonEqualRational = new Rational(7, 8);
+        boolean actual = rational1.equals(nonEqualRational);
+        boolean expected = false;
+        assertEquals(expected, actual);
     }
 
-    public Rational divides(Rational b) {
-        Rational bInverse = new Rational(b.denominator(), b.numerator());
-        return times(bInverse);
+    @org.junit.jupiter.api.Test
+    void testToString1() {
+        String actual = rational1.toString();
+        String expected = "1/4";
+        assertEquals(expected, actual);
     }
 
-    @Override
-    public boolean equals(Object x) {
-        if (this == x) {
-            return true;
-        }
-        if (x == null) {
-            return false;
-        }
-        if (this.getClass() != x.getClass()) {
-            return false;
-        }
-
-        Rational that = (Rational) x;
-        if (this.numerator() != that.numerator()) {
-            return false;
-        }
-        if (this.denominator() != that.denominator()) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return this.numerator() + "/" + this.denominator();
+    @org.junit.jupiter.api.Test
+    void testToString2() {
+        String actual = rational2.toString();
+        String expected = "2/3";
+        assertEquals(expected, actual);
     }
 }

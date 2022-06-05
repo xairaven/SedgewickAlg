@@ -3,16 +3,20 @@ import edu.princeton.cs.algs4.Interval1D;
 import edu.princeton.cs.algs4.Interval2D;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
-//28.01.2022
-//Ex. 1.2.3
+
+/**
+ * Ex. 1.2.3 <br>
+ * 28.01.2022
+ * @author xairaven
+ */
 public class Task_03 {
     public static void main(String[] args) {
-        System.out.println("-- Task 1.2.3 --");
-        if (args.length < 3 || Integer.parseInt(args[0]) < 0) {
-            System.out.println("Main -> Edit configurations -> Program Arguments -> Your input (1 int value > 0, 2 double values");
-            return;
-        }
+        System.out.println("-- Exercise 1.2.3 --");
+        if (args.length != 3 || Integer.parseInt(args[0]) < 0)
+            throw new IllegalArgumentException("must input int value (that greater than 1) and 2 double values");
+
         int N = Integer.parseInt(args[0]);
+
         double min = Double.parseDouble(args[1]);
         double max = Double.parseDouble(args[2]);
         if (min > max) {
@@ -20,9 +24,10 @@ public class Task_03 {
             min = max;
             max = temp;
         }
-        Interval2D[] intervals = new Interval2D[N];
+
         Interval1D[][] intervals1D = new Interval1D[N][2];
-        DrawIntervals(intervals, intervals1D, min, max);
+        Interval2D[] intervals = createIntervals(N, intervals1D, min, max);
+        drawIntervals(intervals, min, max);
         int intersects = 0;
         int contains = 0;
         for (int i = 0; i < N - 1; i++) {
@@ -37,19 +42,15 @@ public class Task_03 {
         }
         System.out.printf("Amount of intersecting intervals: %d\n", intersects);
         System.out.printf("Amount of intervals that contain other in it: %d\n", contains);
-        System.out.print("\n\n");
     }
 
-    private static void DrawIntervals(Interval2D[] intervals, Interval1D[][] intervals1D, double min, double max) {
+    private static void drawIntervals(Interval2D[] intervals, double min, double max) {
         StdDraw.setCanvasSize(512, 512);
         StdDraw.setPenRadius(.015);
         StdDraw.setXscale(min, max);
         StdDraw.setYscale(min, max);
-        for (int i = 0; i < intervals.length; i++) {
-            intervals1D[i][0] = createInterval1D(min,max);
-            intervals1D[i][1] = createInterval1D(min,max);
-            intervals[i] = new Interval2D(intervals1D[i][0], intervals1D[i][1]);
-            intervals[i].draw();
+        for (Interval2D interval : intervals) {
+            interval.draw();
         }
     }
 
@@ -61,8 +62,17 @@ public class Task_03 {
             first = second;
             second = temp;
         }
-        Interval1D interval = new Interval1D(first, second);
-        return interval;
+        return new Interval1D(first, second);
+    }
+
+    private static Interval2D[] createIntervals(int N, Interval1D[][] intervals1D, double min, double max) {
+        Interval2D[] intervals = new Interval2D[N];
+        for (int i = 0; i < intervals.length; i++) {
+            intervals1D[i][0] = createInterval1D(min,max);
+            intervals1D[i][1] = createInterval1D(min,max);
+            intervals[i] = new Interval2D(intervals1D[i][0], intervals1D[i][1]);
+        }
+        return intervals;
     }
 
     private static boolean isContained(Interval1D[] first, Interval1D[] second) {
@@ -78,3 +88,12 @@ public class Task_03 {
         );
     }
 }
+
+/*
+Input (command prompt) example:
+6 3.3 6.1
+
+Result example:
+Amount of intersecting intervals: 7
+Amount of intervals that contain other in it: 1
+*/
