@@ -4,7 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Ex. 1.2.16 <br>
- * 30.01.2022
+ * 30.01.2022 <br>
+ * RationalSO structure located in Chapter1.Section2.Structures
  * @author xairaven
  */
 class Task_16 {

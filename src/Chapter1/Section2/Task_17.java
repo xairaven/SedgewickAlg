@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Ex. 1.2.17 <br>
- * 30.01.2022
+ * 30.01.2022 <br>
  * Rational structure located in Chapter1.Section2.Structures
  * @author xairaven
  */

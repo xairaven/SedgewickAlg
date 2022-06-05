@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.Date;
 
 /**
  * Ex. 1.2.13 <br>
- * 30.01.2022
+ * 30.01.2022 <br>
  * Transaction structure located in Chapter1.Section2.Structures
  * @author xairaven
  */

@@ -3,7 +3,7 @@ import Chapter1.Section2.Structures.Accumulator;
 
 /**
  * Ex. 1.2.18 <br>
- * 30.01.2022
+ * 30.01.2022 <br>
  * Accumulator structure located in Chapter1.Section2.Structures
  * @author xairaven
  */

@@ -3,7 +3,7 @@ import Chapter1.Section2.Structures.VisualCounter;
 
 /**
  * Ex. 1.2.10 <br>
- * 29.01.2022
+ * 29.01.2022 <br>
  * VisualCounter structure located in Chapter1.Section2.Structures
  * @author xairaven
  */
