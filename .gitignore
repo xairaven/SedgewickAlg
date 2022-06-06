@@ -1,7 +1,9 @@
+*.class
+
+# IDE
 .idea/
 out/
 
-*.class
-
+# Package Files
 *.war
 *.ear
