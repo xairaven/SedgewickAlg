@@ -1,13 +1,18 @@
 package Chapter1.Section3;
 import edu.princeton.cs.algs4.Stack;
-//03.02.2022
-//Ex. 1.3.2
+
+/**
+ * Ex. 1.3.2 <br>
+ * 03.02.2022 <br>
+ * FixedCapacityStackOfStrings structure located in Chapter1.Section3.Structures
+ * @author xairaven
+ */
 public class Task_02 {
-    public static void main() {
-        System.out.println("-- Task 1.3.2 --");
+    public static void main(String[] args) {
+        System.out.println("-- Exercise 1.3.2 --");
         Stack<String> stack = new Stack<>();
-        String str = "it was - the best - of times - - - it was - the - -";
-        String[] arr = str.split(" ");
+        String input = "it was - the best - of times - - - it was - the - -";
+        String[] arr = input.split(" ");
         for(String item: arr) {
             if (!item.equals("-")) {
                 stack.push(item);
@@ -15,9 +20,12 @@ public class Task_02 {
                 System.out.print(stack.pop() + " ");
             }
         }
-        //was best times of the was the it
-        //(1 elem left on stack)
-        System.out.printf("\n(%d elem left on stack)", stack.size());
-        System.out.print("\n\n");
+        System.out.printf("\n(%d element left on stack)", stack.size());
     }
 }
+
+/*
+Result:
+was best times of the was the it
+(1 element left on stack)
+ */

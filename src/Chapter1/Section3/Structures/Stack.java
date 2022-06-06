@@ -1,6 +1,12 @@
-package StructAlgsXai;
+package Chapter1.Section3.Structures;
 import java.util.Iterator;
-//Copy of implementation from my repo "Algorithms-Data-Structures"
+
+/**
+ * For exs. 1.3.7, 1.3.12 <br>
+ * 03.02.2022
+ * Copy from my Algorithms-Data-Structures repo
+ * @author xairaven
+ */
 public class Stack<Item> implements Iterable<Item> {
     private Node first;
     private int size;
@@ -14,6 +20,7 @@ public class Stack<Item> implements Iterable<Item> {
         return size == 0;
     }
 
+    // Ex. 1.3.12
     public Stack<Item> copy() {
         Stack<Item> temp = new Stack<>();
         Stack<Item> copy = new Stack<>();
@@ -51,6 +58,7 @@ public class Stack<Item> implements Iterable<Item> {
         return item;
     }
 
+    // Ex. 1.3.7
     public Item peek() {
         if (isEmpty()) {
             return null;
@@ -78,4 +86,3 @@ public class Stack<Item> implements Iterable<Item> {
         }
     }
 }
-
