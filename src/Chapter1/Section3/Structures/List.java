@@ -9,6 +9,10 @@ import java.util.NoSuchElementException;
  * Ex. 1.3.20: {@link #delete(int)} <br>
  * Ex. 1.3.24: {@link #removeAfter(Node)}, {@link #removeAfterTest(String)} <br>
  * Ex. 1.3.25: {@link #insertAfter(Node, Node)}, {@link #insertAfterTest(String, String)} <br>
+ * Ex. 1.3.26: {@link #remove(Object)} <br>
+ * Ex. 1.3.27: {@link #max()} <br>
+ * Ex. 1.3.28: {@link #maxRecursive()}, {@link #maxRecursive(Node, int)} <br>
+ * Ex. 1.3.30: {@link #reverse()}, {@link #reverse(Node)}, {@link #reverseRecursive()}, {@link #reverseRecursive(Node)} <br>
  * 07.06.2022
  * @author xairaven
  */
@@ -108,6 +112,85 @@ public class List<Item> implements Iterable<Item> {
         }
 
         return null;
+    }
+
+    // Ex. 1.3.26
+    public void remove(Item key) {
+        if (isEmpty()) throw new NoSuchElementException("list is empty");
+        if (key == null) throw new IllegalArgumentException("item can't be null");
+
+        while ((first != null) && (first.item).equals(key)) {
+            first = first.next;
+            size--;
+        }
+
+        for (Node current = first; current != null; current = current.next){
+            if ((current.next != null) && ((current.next).item).equals(key)){
+                current.next = (current.next).next;
+                size--;
+            }
+        }
+    }
+
+    // Ex. 1.3.27
+    public int max() {
+        if (isEmpty()) return 0;
+
+        int max = (int) Double.NEGATIVE_INFINITY;
+        for (Item item : this) {
+            int intItem = (Integer) item;
+            if (intItem > max) max = intItem;
+        }
+        return max;
+    }
+
+    // Ex. 1.3.28, recursive
+    public int maxRecursive() {
+        return maxRecursive(first, (Integer) first.item);
+    }
+
+    // Ex. 1.3.28, recursive
+    private int maxRecursive(Node node, int max) {
+        if (node == null) return max;
+
+        int current = (Integer) node.item;
+        if (current > max) max = current;
+
+        return maxRecursive(node.next, max);
+    }
+
+    // Ex. 1.3.30
+    public void reverse() {
+        first = reverse(first);
+    }
+
+    // Ex. 1.3.30
+    private Node reverse(Node x) {
+        Node first = x;
+        Node reverse = null;
+        while (first != null) {
+            Node second = first.next;
+            first.next = reverse;
+            reverse = first;
+            first = second;
+        }
+        return reverse;
+    }
+
+    // Ex. 1.3.30
+    public void reverseRecursive() {
+        first = reverseRecursive(first);
+    }
+
+    // Ex. 1.3.30
+    private Node reverseRecursive(Node first) {
+        if (first == null) return null;
+        if (first.next == null) return first;
+        Node second = first.next;
+        Node rest = reverse(second);
+        second.next = first;
+        first.next  = null;
+        return rest;
     }
 
     @Override
