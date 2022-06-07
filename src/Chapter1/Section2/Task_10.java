@@ -3,8 +3,8 @@ import Chapter1.Section2.Structures.VisualCounter;
 
 /**
  * Ex. 1.2.10 <br>
- * 29.01.2022 <br>
- * VisualCounter structure located in Chapter1.Section2.Structures
+ * {@link VisualCounter} structure located in Chapter1.Section2.Structures <br>
+ * 29.01.2022
  * @author xairaven
  */
 public class Task_10 {

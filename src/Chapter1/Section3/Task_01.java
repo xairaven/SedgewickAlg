@@ -3,8 +3,8 @@ import Chapter1.Section3.Structures.FixedCapacityStackOfStrings;
 
 /**
  * Ex. 1.3.1 <br>
- * 02.02.2022 <br>
- * FixedCapacityStackOfStrings structure located in Chapter1.Section3.Structures
+ * {@link FixedCapacityStackOfStrings} structure located in Chapter1.Section3.Structures <br>
+ * 02.02.2022
  * @author xairaven
  */
 public class Task_01 {

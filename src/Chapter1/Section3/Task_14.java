@@ -4,8 +4,8 @@ import  Chapter1.Section3.Structures.ResizingArrayQueue;
 
 /**
  * Ex. 1.3.14 <br>
- * 10.02.2022  <br>
- * FixedCapacityQueue & ResizingArrayQueue structures located in Chapter1.Section3.Structures
+ * {@link FixedCapacityQueue} & {@link ResizingArrayQueue} structures located in Chapter1.Section3.Structures <br>
+ * 10.02.2022
  * @author xairaven
  */
 public class Task_14 {

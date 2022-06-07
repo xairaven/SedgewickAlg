@@ -5,9 +5,9 @@ import java.util.NoSuchElementException;
 
 /**
  * For exs. 1.3.19, 1.3.20 <br>
- * 07.06.2022 <br>
  * Ex. 1.3.19: {@link #deleteLastNode()} <br>
- * Ex. 1.3.20: {@link #delete(int)}
+ * Ex. 1.3.20: {@link #delete(int)} <br>
+ * 07.06.2022
  * @author xairaven
  */
 public class List<Item> implements Iterable<Item> {

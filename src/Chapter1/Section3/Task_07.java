@@ -3,8 +3,8 @@ import  Chapter1.Section3.Structures.Stack;
 
 /**
  * Ex. 1.3.7 <br>
- * 03.02.2022 <br>
- * Stack structure located in Chapter1.Section3.Structures
+ * {@link Stack} structure located in Chapter1.Section3.Structures <br>
+ * 03.02.2022
  * @author xairaven
  */
 public class Task_07 {

@@ -3,6 +3,8 @@ import edu.princeton.cs.algs4.Date;
 
 /**
  * For exs. 1.2.13, 1.2.14, 1.2.19 <br>
+ * Ex. 1.2.14: {@link #equals(Object)} <br>
+ * Ex. 1.2.19: {@link #Transaction(String)} <br>
  * 30.01.2022
  * @author xairaven
  */

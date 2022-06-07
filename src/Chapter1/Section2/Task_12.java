@@ -3,8 +3,8 @@ import Chapter1.Section2.Structures.SmartDate;
 
 /**
  * Ex. 1.2.12 <br>
- * 30.01.2022 <br>
- * SmartDate structure located in Chapter1.Section2.Structures
+ * {@link SmartDate} structure located in Chapter1.Section2.Structures <br>
+ * 30.01.2022
  * @author xairaven
  */
 public class Task_12 {

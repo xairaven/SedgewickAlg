@@ -5,8 +5,8 @@ import edu.princeton.cs.algs4.Date;
 
 /**
  * Ex. 1.2.19 <br>
- * 30.01.2022 <br>
- * SmartDate & Transaction structures located in Chapter1.Section2.Structures
+ * {@link SmartDate} & {@link Transaction} structures located in Chapter1.Section2.Structures <br>
+ * 30.01.2022
  * @author xairaven
  */
 public class Task_19 {

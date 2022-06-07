@@ -3,8 +3,10 @@ import java.util.Iterator;
 
 /**
  * For exs. 1.3.7, 1.3.12 <br>
+ * Ex. 1.3.7: {@link #peek()} <br>
+ * Ex. 1.3.12: {@link #copy()}, {@link #iterator()} <br>
+ * Extended copy from my Algorithms-Data-Structures repo <br>
  * 03.02.2022
- * Copy from my Algorithms-Data-Structures repo
  * @author xairaven
  */
 public class Stack<Item> implements Iterable<Item> {
@@ -66,6 +68,7 @@ public class Stack<Item> implements Iterable<Item> {
         return first.item;
     }
 
+    // Ex. 1.3.12
     public Iterator<Item> iterator() {
         return new StackIterator();
     }

@@ -1,11 +1,12 @@
 package Chapter1.Section2;
 import Chapter1.Section2.Structures.Rational;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Ex. 1.2.17 <br>
- * 30.01.2022 <br>
- * Rational structure located in Chapter1.Section2.Structures
+ * {@link Rational} structure located in Chapter1.Section2.Structures <br>
+ * 30.01.2022
  * @author xairaven
  */
 class Task_17 {

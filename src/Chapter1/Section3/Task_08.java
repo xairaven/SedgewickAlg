@@ -3,8 +3,8 @@ import  Chapter1.Section3.Structures.DoublingStackOfStrings;
 
 /**
  * Ex. 1.3.8 <br>
- * 03.02.2022 <br>
- * DoublingStackOfStrings structure located in Chapter1.Section3.Structures
+ * {@link DoublingStackOfStrings} structure located in Chapter1.Section3.Structures <br>
+ * 03.02.2022
  * @author xairaven
  */
 public class Task_08 {

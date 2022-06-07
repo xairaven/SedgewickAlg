@@ -3,8 +3,7 @@ import edu.princeton.cs.algs4.Stack;
 
 /**
  * Ex. 1.3.2 <br>
- * 03.02.2022 <br>
- * FixedCapacityStackOfStrings structure located in Chapter1.Section3.Structures
+ * 03.02.2022
  * @author xairaven
  */
 public class Task_02 {

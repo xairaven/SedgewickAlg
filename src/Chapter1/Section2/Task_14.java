@@ -4,8 +4,8 @@ import edu.princeton.cs.algs4.Date;
 
 /**
  * Ex. 1.2.14 <br>
- * 30.01.2022 <br>
- * Transaction structure located in Chapter1.Section2.Structures
+ * {@link Transaction} structure located in Chapter1.Section2.Structures <br>
+ * 30.01.2022
  * @author xairaven
  */
 public class Task_14 {

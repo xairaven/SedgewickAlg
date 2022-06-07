@@ -6,6 +6,8 @@ import java.util.Date;
 
 /**
  * For exs. 1.2.11, 1.2.12, 1.2.19 <br>
+ * Ex. 1.2.12: {@link #dayOfTheWeek()} <br>
+ * Ex. 1.2.19: {@link #SmartDate(String)} <br>
  * 29.01.2022
  * @author xairaven
  */

@@ -2,6 +2,7 @@ package Chapter1.Section3.Structures;
 
 /**
  * For ex. 1.3.1 <br>
+ * Ex. 1.3.1: {@link #isFull()} <br>
  * 02.02.2022
  * @author xairaven
  */
