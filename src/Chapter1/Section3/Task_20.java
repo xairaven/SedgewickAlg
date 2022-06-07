@@ -2,7 +2,7 @@ package Chapter1.Section3;
 import  Chapter1.Section3.Structures.List;
 
 /**
- * Ex. 1.3.19 <br>
+ * Ex. 1.3.20 <br>
  * {@link List} structure located in Chapter1.Section3.Structures <br>
  * 07.06.2022
  * @author xairaven

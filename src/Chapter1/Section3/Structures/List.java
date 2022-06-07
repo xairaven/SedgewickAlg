@@ -4,9 +4,11 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * For exs. 1.3.19, 1.3.20 <br>
+ * For exs. 1.3.19, 1.3.20, 1.3.21, 1.3.24, 1.3.25 <br>
  * Ex. 1.3.19: {@link #deleteLastNode()} <br>
  * Ex. 1.3.20: {@link #delete(int)} <br>
+ * Ex. 1.3.24: {@link #removeAfter(Node)}, {@link #removeAfterTest(String)} <br>
+ * Ex. 1.3.25: {@link #insertAfter(Node, Node)}, {@link #insertAfterTest(String, String)} <br>
  * 07.06.2022
  * @author xairaven
  */
@@ -21,6 +23,10 @@ public class List<Item> implements Iterable<Item> {
         private Node(Item item, Node next) {
             this.item = item;
             this.next = next;
+        }
+
+        private Node(Item item) {
+            this.item = item;
         }
     }
 
@@ -137,5 +143,53 @@ public class List<Item> implements Iterable<Item> {
         public void remove() {
             throw new UnsupportedOperationException();
         }
+    }
+
+    /***************************************************************************
+     *  Auxiliary methods for exercises, not part of the structure
+     ***************************************************************************/
+
+    // Ex. 1.3.24
+    private void removeAfter(Node x) {
+        if (isEmpty()) throw new NoSuchElementException("list is empty");
+        if (x == null) throw new IllegalArgumentException("given Node to removeAfter() is null");
+
+        for (Node current = first; current != null; current = current.next) {
+            if (current.item.equals(x.item)) {
+                if (current.next != null) {
+                    current.next = current.next.next;
+                    size--;
+                }
+                break;
+            }
+        }
+    }
+
+    // Ex. 1.3.24
+    public void removeAfterTest(String s){
+        List<Item>.Node x = new Node((Item) s);
+        this.removeAfter(x);
+    }
+
+    // Ex. 1.3.25
+    private void insertAfter(Node x, Node afterX) {
+        if (isEmpty()) throw new NoSuchElementException("list is empty");
+        if (x == null || afterX == null) throw new IllegalArgumentException("given Node to insertAfter() is null");
+
+        for (Node current = first; current != null; current = current.next) {
+            if (current.item.equals(x.item)) {
+                Node after = current.next;
+                current.next = new Node(afterX.item, after);
+                size++;
+                break;
+            }
+        }
+    }
+
+    // Ex. 1.3.25
+    public void insertAfterTest(String s, String afterS) {
+        List<Item>.Node x = new Node((Item) s);
+        List<Item>.Node afterX = new Node((Item) afterS);
+        this.insertAfter(x, afterX);
     }
 }
