@@ -1,11 +1,11 @@
 package Chapter1.Section3;
 import  Chapter1.Section3.Structures.Card;
 import  Chapter1.Section3.Structures.RandomQueue;
-import java.util.ArrayList;
+import  java.util.ArrayList;
 
 /**
  * Ex. 1.3.35 <br>
- * {@link RandomQueue} structure located in Chapter1.Section3.Structures <br>
+ * {@link RandomQueue} & {@link Card} structures located in Chapter1.Section3.Structures <br>
  * 10.06.2022
  * @author xairaven
  */
