@@ -2,9 +2,10 @@ package Chapter1.Section3.Structures;
 import java.util.Iterator;
 
 /**
- * For exs. 1.3.7, 1.3.12 <br>
+ * For exs. 1.3.7, 1.3.12, 1.3.42 <br>
  * Ex. 1.3.7: {@link #peek()} <br>
  * Ex. 1.3.12: {@link #copy()}, {@link #iterator()} <br>
+ * Ex. 1.3.42: {@link #Stack(Stack)} <br>
  * Extended copy from my Algorithms-Data-Structures repo <br>
  * 03.02.2022
  * @author xairaven
@@ -16,6 +17,21 @@ public class Stack<Item> implements Iterable<Item> {
     private class Node {
         Item item;
         Node next;
+    }
+
+    public Stack() {}
+
+    // Ex. 1.3.42
+    public Stack(Stack<Item> s){
+        this();
+
+        Stack<Item> temp = new Stack<>();
+        for (Item it : s) {
+            temp.push(it);
+        }
+        for (Item it : temp) {
+            this.push(it);
+        }
     }
 
     public boolean isEmpty() {
@@ -66,6 +82,20 @@ public class Stack<Item> implements Iterable<Item> {
             return null;
         }
         return first.item;
+    }
+
+    @Override
+    public String toString() {
+        var sb = new StringBuilder();
+
+        sb.append("[");
+        for (Node x = first; x != null; x = x.next) {
+            sb.append(x.item);
+            if (x.next != null) sb.append(", ");
+        }
+        sb.append("]");
+
+        return sb.toString();
     }
 
     // Ex. 1.3.12
