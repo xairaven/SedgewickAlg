@@ -3,8 +3,9 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * For ex. 1.3.41 <br>
+ * For exs. 1.3.41, 1.3.47 <br>
  * Ex. 1.3.41: {@link #Queue(Queue)} <br>
+ * Ex. 1.3.47: {@link #catenation(Queue)} <br>
  * 10.06.2022
  * @author xairaven
  */
@@ -104,6 +105,23 @@ public class Queue<Item> implements Iterable<Item> {
             Item item = current.item;
             current = current.next;
             return item;
+        }
+    }
+
+    /***************************************************************************
+     *                              Extra-methods                              *
+     ***************************************************************************/
+
+    public void catenation(Queue<Item> q) {
+        CircularList<Item> temp = new CircularList<>();
+        while (!this.isEmpty()) {
+            temp.pushLast(this.dequeue());
+        }
+        while (!q.isEmpty()) {
+            temp.pushLast(q.dequeue());
+        }
+        while (!temp.isEmpty()) {
+            this.enqueue(temp.deleteFirst());
         }
     }
 }

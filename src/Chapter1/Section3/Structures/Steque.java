@@ -3,7 +3,8 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * For ex. 1.3.32 <br>
+ * For exs. 1.3.32, 1.3.47 <br>
+ * Ex. 1.3.47: {@link #catenation(Steque)} <br>
  * 10.06.2022
  * @author xairaven
  */
@@ -96,6 +97,23 @@ public class Steque<Item> implements Iterable<Item> {
             Item item = current.item;
             current = current.next;
             return item;
+        }
+    }
+
+    /***************************************************************************
+     *                              Extra-methods                              *
+     ***************************************************************************/
+
+    public void catenation(Steque<Item> s) {
+        CircularList<Item> temp = new CircularList<>();
+        while (!this.isEmpty()) {
+            temp.pushFirst(this.pop());
+        }
+        while (!s.isEmpty()) {
+            temp.pushFirst(s.pop());
+        }
+        while (!temp.isEmpty()) {
+            this.push(temp.deleteFirst());
         }
     }
 }

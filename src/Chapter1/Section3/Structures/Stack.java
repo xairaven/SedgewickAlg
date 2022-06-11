@@ -1,11 +1,14 @@
 package Chapter1.Section3.Structures;
-import java.util.Iterator;
+import java.util.ConcurrentModificationException;
+import  java.util.Iterator;
 
 /**
- * For exs. 1.3.7, 1.3.12, 1.3.42 <br>
+ * For exs. 1.3.7, 1.3.12, 1.3.42, 1.3.47, 1.3.50 <br>
  * Ex. 1.3.7: {@link #peek()} <br>
  * Ex. 1.3.12: {@link #copy()}, {@link #iterator()} <br>
  * Ex. 1.3.42: {@link #Stack(Stack)} <br>
+ * Ex. 1.3.47: {@link #catenation(Stack)} <br>
+ * Ex. 1.3.50: {@link #iterator()} <br>
  * Extended copy from my Algorithms-Data-Structures repo <br>
  * 03.02.2022
  * @author xairaven
@@ -13,6 +16,8 @@ import java.util.Iterator;
 public class Stack<Item> implements Iterable<Item> {
     private Node first;
     private int size;
+
+    private int operationCounter;
 
     private class Node {
         Item item;
@@ -56,14 +61,15 @@ public class Stack<Item> implements Iterable<Item> {
     }
 
     public void push(Item item) {
-        if (item == null) {
-            throw new IllegalArgumentException("Item can't be null");
-        }
+        if (item == null) throw new IllegalArgumentException("Item can't be null");
+
         Node newNode = new Node();
         newNode.item = item;
         newNode.next = first;
         first = newNode;
         size++;
+
+        operationCounter++;
     }
 
     public Item pop() {
@@ -73,6 +79,9 @@ public class Stack<Item> implements Iterable<Item> {
         Item item = first.item;
         first = first.next;
         size--;
+
+        operationCounter++;
+
         return item;
     }
 
@@ -98,24 +107,49 @@ public class Stack<Item> implements Iterable<Item> {
         return sb.toString();
     }
 
-    // Ex. 1.3.12
+    // Ex. 1.3.12, 1.3.50
     public Iterator<Item> iterator() {
         return new StackIterator();
     }
 
     private class StackIterator implements Iterator<Item> {
         private Node current = first;
+        private final int operations;
+
+        public StackIterator() {
+            operations = operationCounter;
+        }
 
         @Override
         public boolean hasNext() {
+            if (operations != operationCounter) throw new ConcurrentModificationException();
             return current != null;
         }
 
         @Override
         public Item next() {
+            if (operations != operationCounter) throw new ConcurrentModificationException();
+
             Item item = current.item;
             current = current.next;
             return item;
+        }
+    }
+
+    /***************************************************************************
+     *                              Extra-methods                              *
+     ***************************************************************************/
+
+    public void catenation(Stack<Item> s) {
+        CircularList<Item> temp = new CircularList<>();
+        while (!this.isEmpty()) {
+            temp.pushFirst(this.pop());
+        }
+        while (!s.isEmpty()) {
+            temp.pushFirst(s.pop());
+        }
+        while (!temp.isEmpty()) {
+            this.push(temp.deleteFirst());
         }
     }
 }

@@ -82,6 +82,14 @@ public class Deque<Item> implements Iterable<Item>{
         return item;
     }
 
+    public Item first() {
+        return first.item;
+    }
+
+    public Item last() {
+        return last.item;
+    }
+
     @Override
     public String toString() {
         if (isEmpty()) return "[]";
