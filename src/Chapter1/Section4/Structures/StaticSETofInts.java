@@ -2,7 +2,9 @@ package Chapter1.Section4.Structures;
 import  java.util.Arrays;
 
 /**
- * For ex. 1.4.11 <br>
+ * For exs. 1.4.11, 1.4.21 <br>
+ * Ex. 1.4.11: {@link #howMany(int)} <br>
+ * Ex. 1.4.21: {@link #contains(int)} <br>
  * 13.06.2022
  * @author xairaven
  */
@@ -16,6 +18,7 @@ public class StaticSETofInts {
         Arrays.sort(a);
     }
 
+    // Ex. 1.4.21
     public boolean contains(int key) {
         return rank(key, a, 0, a.length - 1) != -1;
     }
